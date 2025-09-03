@@ -206,9 +206,11 @@ const Services = () => {
                       
                       <div className="pt-4 border-t border-border">
                         <div className="text-lg font-bold gradient-text mb-4">{service.pricing}</div>
-                        <Button className="w-full bg-gradient-primary hover:opacity-90">
-                          Get Started
-                        </Button>
+                        <ContactPopup>
+                          <Button className="w-full bg-gradient-primary hover:opacity-90">
+                            Get Started
+                          </Button>
+                        </ContactPopup>
                       </div>
                     </div>
                   </CardContent>

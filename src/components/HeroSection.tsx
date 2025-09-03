@@ -45,9 +45,11 @@ const HeroSection = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button size="lg" className="bg-gradient-primary hover:opacity-90 transition-opacity text-lg px-8">
-                Get Free Consultation
-              </Button>
+              <ContactPopup>
+                <Button size="lg" className="bg-gradient-primary hover:opacity-90 transition-opacity text-lg px-8">
+                  Get Free Consultation
+                </Button>
+              </ContactPopup>
               <Button variant="outline" size="lg" className="text-lg px-8">
                 View Our Services
               </Button>

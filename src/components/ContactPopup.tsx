@@ -49,7 +49,7 @@ const ContactPopup = ({ children }: ContactPopupProps) => {
 
           <Button 
             onClick={handleWhatsApp}
-            className="w-full h-14 bg-green-500 hover:bg-green-600 text-white text-lg"
+            className="w-full h-14 bg-success text-success-foreground hover:bg-success/90 text-lg"
             size="lg"
           >
             <MessageCircle className="w-5 h-5 mr-3" />

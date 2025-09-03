@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X, TrendingUp, PieChart, BookOpen, User, Home } from 'lucide-react';
+import ContactPopup from '@/components/ContactPopup';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,12 +39,16 @@ const Navigation = () => {
 
           {/* Action Buttons */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="ghost" className="text-muted-foreground">
-              Contact Us
-            </Button>
-            <Button className="bg-gradient-primary hover:opacity-90 transition-opacity">
-              Free Consultation
-            </Button>
+            <ContactPopup>
+              <Button variant="ghost" className="text-muted-foreground">
+                Contact Us
+              </Button>
+            </ContactPopup>
+            <ContactPopup>
+              <Button className="bg-gradient-primary hover:opacity-90 transition-opacity">
+                Free Consultation
+              </Button>
+            </ContactPopup>
           </div>
 
           {/* Mobile Menu Button */}
@@ -78,13 +83,17 @@ const Navigation = () => {
                 );
               })}
               <div className="flex flex-col space-y-3 pt-4 border-t border-border">
-                <Button variant="ghost" className="justify-start">
-                  <User className="w-4 h-4 mr-2" />
-                  Contact Us
-                </Button>
-                <Button className="bg-gradient-primary hover:opacity-90 transition-opacity">
-                  Free Consultation
-                </Button>
+                <ContactPopup>
+                  <Button variant="ghost" className="justify-start">
+                    <User className="w-4 h-4 mr-2" />
+                    Contact Us
+                  </Button>
+                </ContactPopup>
+                <ContactPopup>
+                  <Button className="bg-gradient-primary hover:opacity-90 transition-opacity">
+                    Free Consultation
+                  </Button>
+                </ContactPopup>
               </div>
             </div>
           </div>
