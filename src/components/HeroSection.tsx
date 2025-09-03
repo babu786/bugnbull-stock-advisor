@@ -10,14 +10,14 @@ const HeroSection = () => {
           {/* Left Column - Content */}
           <div className="text-center lg:text-left animate-fade-in-up">
             <h1 className="text-5xl lg:text-6xl font-bold leading-tight mb-6">
-              <span className="gradient-text">Professional</span>
+              <span className="gradient-text">Your Trusted</span>
               <br />
-              <span className="text-foreground">investment services.</span>
+              <span className="text-foreground">Investment Partners</span>
             </h1>
             
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed max-w-2xl">
-              Expert SIP planning, mutual fund advisory, and comprehensive research services 
-              to help you achieve your financial goals with confidence.
+              BUGnBULL provides expert financial advisory services including SIP planning, 
+              mutual fund guidance, and comprehensive market research to help you build wealth systematically.
             </p>
 
             {/* Key Features */}
@@ -27,8 +27,8 @@ const HeroSection = () => {
                   <TrendingUp className="w-5 h-5 text-primary" />
                 </div>
                 <div className="text-left">
-                  <p className="font-semibold">Expert Strategies</p>
-                  <p className="text-sm text-muted-foreground">AI-powered portfolios</p>
+                  <p className="font-semibold">Expert Advisory</p>
+                  <p className="text-sm text-muted-foreground">Personalized guidance</p>
                 </div>
               </div>
               
@@ -37,8 +37,8 @@ const HeroSection = () => {
                   <Shield className="w-5 h-5 text-success" />
                 </div>
                 <div className="text-left">
-                  <p className="font-semibold">Secure Trading</p>
-                  <p className="text-sm text-muted-foreground">Bank-level security</p>
+                  <p className="font-semibold">SEBI Registered</p>
+                  <p className="text-sm text-muted-foreground">Trusted & compliant</p>
                 </div>
               </div>
             </div>
@@ -53,7 +53,7 @@ const HeroSection = () => {
             </div>
 
             <p className="text-sm text-muted-foreground mt-4">
-              *Personalized investment advisory tailored to your financial goals.
+              *SEBI Registered Investment Advisor | Free consultation for new clients.
             </p>
           </div>
 

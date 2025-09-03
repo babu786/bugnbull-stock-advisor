@@ -6,10 +6,8 @@ const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { name: 'Trading', href: '#trading', icon: TrendingUp },
-    { name: 'Portfolios', href: '#portfolios', icon: PieChart },
-    { name: 'Research', href: '#research', icon: BookOpen },
-    { name: 'Learn', href: '#learn', icon: BookOpen },
+    { name: 'Learn', href: '/learn', icon: BookOpen },
+    { name: 'Services', href: '/services', icon: User },
   ];
 
   return (
