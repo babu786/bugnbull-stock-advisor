@@ -143,7 +143,7 @@ const ProductsSection = () => {
                 <Button size="lg" className="bg-gradient-primary hover:opacity-90 transition-opacity">
                   AngelOne
                 </Button>
-                <Button variant="outline" size="lg" className="bg-yellow-400 text-black hover:bg-yellow-500 border-yellow-400">
+                <Button variant="outline" size="lg" className="bg-green-400 text-black hover:bg-green-500 border-green-400">
                   Assetplus
                 </Button>
               </div>
