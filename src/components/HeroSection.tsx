@@ -4,10 +4,10 @@ import ContactPopup from '@/components/ContactPopup';
 
 const HeroSection = () => {
   return (
-    <section className="relative bg-gradient-hero py-20 lg:py-32 overflow-hidden">
+    <section className="relative bg-gradient-hero py-12 sm:py-16 lg:py-32 overflow-hidden">
       <div className="absolute inset-0 opacity-5"></div>
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
           {/* Left Column - Content */}
           <div className="text-center lg:text-left animate-fade-in-up">
             <h1 className="text-5xl lg:text-6xl font-bold leading-tight mb-6">

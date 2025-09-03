@@ -172,42 +172,42 @@ const Services = () => {
       {/* Services Grid */}
       <section className="py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {services.map((service, index) => {
               const Icon = service.icon;
               return (
                 <Card key={index} className={`relative hover:shadow-lg transition-shadow duration-300 ${service.popular ? 'border-primary ring-1 ring-primary' : ''}`}>
                   {service.popular && (
-                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-primary text-white px-4 py-1 rounded-full text-sm font-medium">
+                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
+                      <span className="bg-gradient-primary text-white px-3 py-1 rounded-full text-xs sm:text-sm font-medium">
                         Most Popular
                       </span>
                     </div>
                   )}
                   
-                  <CardHeader>
-                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                      <Icon className="w-6 h-6 text-primary" />
+                  <CardHeader className="pb-4">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                      <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
                     </div>
-                    <CardTitle className="text-xl">{service.title}</CardTitle>
-                    <CardDescription>{service.description}</CardDescription>
+                    <CardTitle className="text-lg sm:text-xl">{service.title}</CardTitle>
+                    <CardDescription className="text-sm sm:text-base">{service.description}</CardDescription>
                   </CardHeader>
                   
                   <CardContent>
                     <div className="space-y-4">
                       <ul className="space-y-2">
                         {service.features.map((feature, idx) => (
-                          <li key={idx} className="flex items-start space-x-2 text-sm">
-                            <CheckCircle className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                          <li key={idx} className="flex items-start space-x-2 text-xs sm:text-sm">
+                            <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 text-success mt-0.5 flex-shrink-0" />
                             <span>{feature}</span>
                           </li>
                         ))}
                       </ul>
                       
                       <div className="pt-4 border-t border-border">
-                        <div className="text-lg font-bold gradient-text mb-4">{service.pricing}</div>
+                        <div className="text-base sm:text-lg font-bold gradient-text mb-4">{service.pricing}</div>
                         <ContactPopup>
-                          <Button className="w-full bg-gradient-primary hover:opacity-90">
+                          <Button className="w-full bg-gradient-primary hover:opacity-90" size="sm">
                             Get Started
                           </Button>
                         </ContactPopup>
@@ -233,14 +233,14 @@ const Services = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
             {processSteps.map((step, index) => (
               <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center text-white text-xl font-bold mb-4 mx-auto">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-primary rounded-full flex items-center justify-center text-white text-lg sm:text-xl font-bold mb-4 mx-auto">
                   {step.step}
                 </div>
-                <h3 className="text-lg font-semibold mb-2">{step.title}</h3>
-                <p className="text-muted-foreground text-sm">{step.description}</p>
+                <h3 className="text-sm sm:text-lg font-semibold mb-2">{step.title}</h3>
+                <p className="text-muted-foreground text-xs sm:text-sm">{step.description}</p>
               </div>
             ))}
           </div>
@@ -259,16 +259,16 @@ const Services = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
             {whyChooseUs.map((item, index) => {
               const Icon = item.icon;
               return (
                 <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4 mx-auto">
-                    <Icon className="w-8 h-8 text-primary" />
+                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4 mx-auto">
+                    <Icon className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
                   </div>
-                  <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
-                  <p className="text-muted-foreground text-sm">{item.description}</p>
+                  <h3 className="text-sm sm:text-lg font-semibold mb-2">{item.title}</h3>
+                  <p className="text-muted-foreground text-xs sm:text-sm">{item.description}</p>
                 </div>
               );
             })}
@@ -286,19 +286,29 @@ const Services = () => {
             Get in touch with our experts for a free consultation and personalized investment strategy.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-primary hover:bg-white/90 text-lg px-8">
-              <Phone className="w-5 h-5 mr-2" />
-              Schedule Call
-            </Button>
-            <Button variant="outline" size="lg" className="bg-transparent border border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 text-lg px-8">
-              <Mail className="w-5 h-5 mr-2" />
-              Email Us
-            </Button>
-            <Button variant="outline" size="lg" className="bg-transparent border border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 text-lg px-8">
-              <MessageCircle className="w-5 h-5 mr-2" />
-              Live Chat
-            </Button>
+          <div className="flex flex-col gap-3 sm:gap-4">
+            <ContactPopup>
+              <Button size="lg" className="bg-white text-primary hover:bg-white/90 text-base sm:text-lg px-6 sm:px-8 w-full">
+                <Phone className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
+                Schedule Call
+              </Button>
+            </ContactPopup>
+            <div className="grid grid-cols-2 gap-3 sm:gap-4">
+              <ContactPopup>
+                <Button variant="outline" size="lg" className="bg-transparent border border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 text-sm sm:text-lg px-4 sm:px-8">
+                  <Mail className="w-4 h-4 sm:w-5 sm:h-5 mr-1 sm:mr-2" />
+                  <span className="hidden sm:inline">Email Us</span>
+                  <span className="sm:hidden">Email</span>
+                </Button>
+              </ContactPopup>
+              <ContactPopup>
+                <Button variant="outline" size="lg" className="bg-transparent border border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 text-sm sm:text-lg px-4 sm:px-8">
+                  <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 mr-1 sm:mr-2" />
+                  <span className="hidden sm:inline">Live Chat</span>
+                  <span className="sm:hidden">Chat</span>
+                </Button>
+              </ContactPopup>
+            </div>
           </div>
         </div>
       </section>

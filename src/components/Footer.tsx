@@ -29,45 +29,45 @@ const Footer = () => {
     <footer className="bg-muted/30 border-t border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="py-16">
-          <div className="grid lg:grid-cols-5 gap-12">
+            <div className="grid lg:grid-cols-5 gap-8 lg:gap-12">
             {/* Brand Section */}
-            <div className="lg:col-span-2">
-              <div className="flex items-center space-x-2 mb-6">
+            <div className="lg:col-span-2 text-center lg:text-left">
+              <div className="flex items-center justify-center lg:justify-start space-x-2 mb-6">
                 <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
                   <TrendingUp className="w-5 h-5 text-white" />
                 </div>
-                <span className="text-2xl font-bold gradient-text">BUGnBULL</span>
+                <span className="text-xl sm:text-2xl font-bold gradient-text">BUGnBULL</span>
               </div>
               
-              <p className="text-muted-foreground mb-6 max-w-md">
+              <p className="text-sm sm:text-base text-muted-foreground mb-6 max-w-md mx-auto lg:mx-0">
                 Empowering investors with intelligent trading solutions, automated portfolios, 
                 and cutting-edge financial technology. Start your investment journey today.
               </p>
 
               <div className="space-y-3">
                 <ContactPopup>
-                  <div className="flex items-center space-x-3 text-muted-foreground hover:text-primary cursor-pointer transition-colors">
+                  <div className="flex items-center justify-center lg:justify-start space-x-3 text-muted-foreground hover:text-primary cursor-pointer transition-colors">
                     <Mail className="w-4 h-4" />
-                    <span>contact@bugnbull.com</span>
+                    <span className="text-sm sm:text-base">contact@bugnbull.com</span>
                   </div>
                 </ContactPopup>
                 <ContactPopup>
-                  <div className="flex items-center space-x-3 text-muted-foreground hover:text-primary cursor-pointer transition-colors">
+                  <div className="flex items-center justify-center lg:justify-start space-x-3 text-muted-foreground hover:text-primary cursor-pointer transition-colors">
                     <Phone className="w-4 h-4" />
-                    <span>+918764551955</span>
+                    <span className="text-sm sm:text-base">+918764551955</span>
                   </div>
                 </ContactPopup>
-                <div className="flex items-center space-x-3 text-muted-foreground">
+                <div className="flex items-center justify-center lg:justify-start space-x-3 text-muted-foreground">
                   <MapPin className="w-4 h-4" />
-                  <span>San Francisco, CA</span>
+                  <span className="text-sm sm:text-base">San Francisco, CA</span>
                 </div>
               </div>
             </div>
 
             {/* Links Sections */}
             {footerSections.map((section, index) => (
-              <div key={index}>
-                <h3 className="font-semibold text-foreground mb-4">{section.title}</h3>
+              <div key={index} className="text-center lg:text-left">
+                <h3 className="font-semibold text-foreground mb-4 text-sm sm:text-base">{section.title}</h3>
                 <ul className="space-y-3">
                   {section.links.map((link, linkIndex) => (
                     <li key={linkIndex}>
@@ -75,7 +75,7 @@ const Footer = () => {
                         <ContactPopup>
                           <a 
                             href="#" 
-                            className="text-muted-foreground hover:text-foreground transition-colors duration-200 cursor-pointer"
+                            className="text-sm sm:text-base text-muted-foreground hover:text-foreground transition-colors duration-200 cursor-pointer"
                           >
                             {link}
                           </a>
@@ -83,7 +83,7 @@ const Footer = () => {
                       ) : (
                         <a 
                           href="#" 
-                          className="text-muted-foreground hover:text-foreground transition-colors duration-200"
+                          className="text-sm sm:text-base text-muted-foreground hover:text-foreground transition-colors duration-200"
                         >
                           {link}
                         </a>

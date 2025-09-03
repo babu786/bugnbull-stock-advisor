@@ -30,47 +30,47 @@ const ContactPopup = ({ children }: ContactPopupProps) => {
       <DialogTrigger asChild>
         {children}
       </DialogTrigger>
-      <DialogContent className="sm:max-w-md">
+      <DialogContent className="sm:max-w-md w-[95vw] max-w-[350px]">
         <DialogHeader>
-          <DialogTitle className="text-center text-xl font-bold">
+          <DialogTitle className="text-center text-lg sm:text-xl font-bold">
             Contact <span className="gradient-text">BUGnBULL</span>
           </DialogTitle>
         </DialogHeader>
         
-        <div className="space-y-4 py-4">
+        <div className="space-y-3 sm:space-y-4 py-4">
           <Button 
             onClick={handlePhoneCall}
-            className="w-full h-14 bg-gradient-primary hover:opacity-90 text-lg"
+            className="w-full h-12 sm:h-14 bg-gradient-primary hover:opacity-90 text-base sm:text-lg"
             size="lg"
           >
-            <Phone className="w-5 h-5 mr-3" />
+            <Phone className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3" />
             Call Now
-            <span className="ml-2 text-sm opacity-80">{phoneNumber}</span>
+            <span className="ml-2 text-xs sm:text-sm opacity-80">{phoneNumber}</span>
           </Button>
 
           <Button 
             onClick={handleWhatsApp}
-            className="w-full h-14 bg-success text-success-foreground hover:bg-success/90 text-lg"
+            className="w-full h-12 sm:h-14 bg-success text-success-foreground hover:bg-success/90 text-base sm:text-lg"
             size="lg"
           >
-            <MessageCircle className="w-5 h-5 mr-3" />
+            <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3" />
             WhatsApp
-            <span className="ml-2 text-sm opacity-80">{whatsappNumber}</span>
+            <span className="ml-2 text-xs sm:text-sm opacity-80">{whatsappNumber}</span>
           </Button>
 
           <Button 
             onClick={handleEmail}
             variant="outline"
-            className="w-full h-14 text-lg"
+            className="w-full h-12 sm:h-14 text-base sm:text-lg"
             size="lg"
           >
-            <Mail className="w-5 h-5 mr-3" />
+            <Mail className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3" />
             Send Email
-            <span className="ml-2 text-sm opacity-80">{email}</span>
+            <span className="ml-2 text-xs sm:text-sm opacity-80">{email}</span>
           </Button>
         </div>
 
-        <div className="text-center text-sm text-muted-foreground">
+        <div className="text-center text-xs sm:text-sm text-muted-foreground">
           Choose your preferred contact method
         </div>
       </DialogContent>
