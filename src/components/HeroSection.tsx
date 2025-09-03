@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { TrendingUp, Shield, Award } from 'lucide-react';
 import ContactPopup from '@/components/ContactPopup';
+import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   return (
