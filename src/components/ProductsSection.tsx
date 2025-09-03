@@ -152,16 +152,44 @@ const ProductsSection = () => {
             <div className="relative">
               {/* iPhone Frame */}
               <div className="w-72 h-[600px] bg-black rounded-[3rem] mx-auto p-2 shadow-2xl">
-                {/* iPhone Notch */}
+                {/* iPhone Screen */}
                 <div className="w-full h-full bg-white rounded-[2.5rem] relative overflow-hidden">
-                  <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-6 bg-black rounded-b-xl z-10"></div>
+                  {/* iPhone Notch */}
+                  <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-6 bg-black rounded-b-xl z-20"></div>
+                  
+                  {/* Status Bar */}
+                  <div className="absolute top-0 left-0 right-0 h-12 bg-transparent z-10 flex items-center justify-between px-6 pt-2">
+                    <div className="flex items-center space-x-1">
+                      <span className="text-black text-sm font-medium">9:41</span>
+                    </div>
+                    <div className="flex items-center space-x-1">
+                      {/* Signal */}
+                      <div className="flex space-x-0.5">
+                        <div className="w-1 h-1 bg-black rounded-full"></div>
+                        <div className="w-1 h-1.5 bg-black rounded-full"></div>
+                        <div className="w-1 h-2 bg-black rounded-full"></div>
+                        <div className="w-1 h-2.5 bg-black rounded-full"></div>
+                      </div>
+                      {/* WiFi */}
+                      <svg className="w-4 h-4 text-black" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 20L8.5 16.5C10.21 14.79 11.79 14.79 13.5 16.5L12 20ZM6 14C9.87 10.13 14.13 10.13 18 14L16.5 15.5C13.59 12.59 10.41 12.59 7.5 15.5L6 14ZM2 10C7.86 4.14 16.14 4.14 22 10L20.5 11.5C15.8 6.8 8.2 6.8 3.5 11.5L2 10Z"/>
+                      </svg>
+                      {/* Battery */}
+                      <div className="flex items-center">
+                        <div className="w-6 h-3 border border-black rounded-sm relative">
+                          <div className="w-4 h-1.5 bg-black rounded-sm absolute top-0.5 left-0.5"></div>
+                        </div>
+                        <div className="w-0.5 h-1.5 bg-black rounded-r ml-0.5"></div>
+                      </div>
+                    </div>
+                  </div>
                   
                   {/* Screen Content - App Screenshot */}
-                  <div className="w-full h-full rounded-[2.5rem] overflow-hidden">
+                  <div className="w-full h-full pt-12 rounded-[2.5rem] overflow-hidden">
                     <img 
                       src="/lovable-uploads/de0efbf3-e25f-4be6-8ba8-f01dab391ad9.png" 
                       alt="BUGnBULL App Screenshot" 
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover object-top"
                     />
                   </div>
                 </div>
