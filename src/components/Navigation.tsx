@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Menu, X, TrendingUp, PieChart, BookOpen, User } from 'lucide-react';
+import { Menu, X, TrendingUp, PieChart, BookOpen, User, Home } from 'lucide-react';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
+    { name: 'Home', href: '/', icon: Home },
     { name: 'Learn', href: '/learn', icon: BookOpen },
     { name: 'Services', href: '/services', icon: User },
   ];
