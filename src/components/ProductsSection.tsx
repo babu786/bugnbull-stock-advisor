@@ -158,8 +158,8 @@ const ProductsSection = () => {
                   <div className="w-[500px] h-[320px] bg-gray-900 rounded-t-xl p-1 shadow-2xl">
                     <div className="w-full h-full bg-white rounded-lg overflow-hidden relative">
                       <img 
-                        src="/lovable-uploads/3a1e8268-ead3-41f4-aac9-092553874446.png" 
-                        alt="BUGnBULL Web Platform" 
+                        src="/lovable-uploads/50449453-dd43-4931-bf03-b653997dd5a0.png" 
+                        alt="BUGnBULL Web Platform Dashboard" 
                         className="w-full h-full object-cover object-top"
                       />
                     </div>
