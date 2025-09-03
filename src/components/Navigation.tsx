@@ -41,11 +41,6 @@ const Navigation = () => {
           {/* Action Buttons */}
           <div className="hidden md:flex items-center space-x-3 lg:space-x-4">
             <ContactPopup>
-              <Button variant="ghost" className="text-muted-foreground text-sm lg:text-base">
-                Contact Us
-              </Button>
-            </ContactPopup>
-            <ContactPopup>
               <Button className="bg-gradient-primary hover:opacity-90 transition-opacity text-sm lg:text-base">
                 Free Consultation
               </Button>
@@ -84,12 +79,6 @@ const Navigation = () => {
                 );
               })}
               <div className="flex flex-col space-y-3 pt-4 border-t border-border">
-                <ContactPopup>
-                  <Button variant="ghost" className="justify-start h-12 text-base">
-                    <User className="w-4 h-4 mr-2" />
-                    Contact Us
-                  </Button>
-                </ContactPopup>
                 <ContactPopup>
                   <Button className="bg-gradient-primary hover:opacity-90 transition-opacity h-12 text-base">
                     Free Consultation
