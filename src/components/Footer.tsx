@@ -3,16 +3,6 @@ import { TrendingUp, Mail, Phone, MapPin } from 'lucide-react';
 const Footer = () => {
   const footerSections = [
     {
-      title: "Products",
-      links: [
-        "Cash Account",
-        "Smart Portfolios", 
-        "Growth Investing",
-        "Active Trading",
-        "Mobile App"
-      ]
-    },
-    {
       title: "Company",
       links: [
         "About Us",
@@ -30,16 +20,6 @@ const Footer = () => {
         "Privacy Policy", 
         "Terms of Service",
         "Disclosures"
-      ]
-    },
-    {
-      title: "Resources",
-      links: [
-        "Investment Guide",
-        "Market Research",
-        "Educational Content",
-        "API Documentation",
-        "Developer Tools"
       ]
     }
   ];
