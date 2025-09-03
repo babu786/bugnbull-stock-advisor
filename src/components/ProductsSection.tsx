@@ -141,10 +141,10 @@ const ProductsSection = () => {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button size="lg" className="bg-gradient-primary hover:opacity-90 transition-opacity">
-                  Try Web Platform
+                  AngelOne
                 </Button>
                 <Button variant="outline" size="lg">
-                  Download Mobile App
+                  Assetplus
                 </Button>
               </div>
             </div>
