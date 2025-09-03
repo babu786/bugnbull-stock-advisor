@@ -150,12 +150,19 @@ const ProductsSection = () => {
             </div>
             
             <div className="relative">
-              <div className="w-64 h-96 bg-card border border-border rounded-3xl mx-auto p-4 shadow-2xl">
-                <div className="w-full h-full bg-gradient-primary rounded-2xl flex items-center justify-center">
-                  <div className="text-center text-white">
-                    <Smartphone className="w-16 h-16 mx-auto mb-4" />
-                    <p className="text-lg font-semibold">BUGnBULL</p>
-                    <p className="text-sm opacity-90">Mobile Trading App</p>
+              {/* iPhone Frame */}
+              <div className="w-72 h-[600px] bg-black rounded-[3rem] mx-auto p-2 shadow-2xl">
+                {/* iPhone Notch */}
+                <div className="w-full h-full bg-white rounded-[2.5rem] relative overflow-hidden">
+                  <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-6 bg-black rounded-b-xl z-10"></div>
+                  
+                  {/* Screen Content - Placeholder for your app screenshot */}
+                  <div className="w-full h-full bg-gradient-to-b from-slate-100 to-slate-200 flex items-center justify-center rounded-[2.5rem]">
+                    <div className="text-center text-slate-600">
+                      <Smartphone className="w-16 h-16 mx-auto mb-4" />
+                      <p className="text-lg font-semibold">BUGnBULL App</p>
+                      <p className="text-sm opacity-70">Insert your screenshot here</p>
+                    </div>
                   </div>
                 </div>
               </div>
