@@ -152,10 +152,10 @@ const ProductsSection = () => {
             <div className="relative">
               <div className="relative flex items-center justify-center">
                 
-                {/* Laptop Mockup - Background */}
+                {/* Laptop Mockup - Borderless Design */}
                 <div className="relative transform -rotate-1 hover:rotate-0 transition-transform duration-500">
-                  {/* Laptop Screen */}
-                  <div className="w-96 h-64 bg-gray-800 rounded-t-xl p-3 shadow-2xl">
+                  {/* Laptop Screen - Minimal Bezel */}
+                  <div className="w-[500px] h-[320px] bg-gray-900 rounded-t-xl p-1 shadow-2xl">
                     <div className="w-full h-full bg-white rounded-lg overflow-hidden relative">
                       <img 
                         src="/lovable-uploads/3a1e8268-ead3-41f4-aac9-092553874446.png" 
@@ -164,17 +164,19 @@ const ProductsSection = () => {
                       />
                     </div>
                   </div>
-                  {/* Laptop Base */}
-                  <div className="w-[420px] h-8 bg-gray-700 rounded-b-2xl -mt-1 shadow-lg relative"
+                  {/* Laptop Base - Thinner */}
+                  <div className="w-[520px] h-4 bg-gray-800 rounded-b-xl -mt-0.5 shadow-lg relative"
                        style={{
-                         background: 'linear-gradient(145deg, #374151 0%, #1f2937 100%)'
+                         background: 'linear-gradient(145deg, #1f2937 0%, #111827 100%)'
                        }}>
-                    <div className="w-20 h-1.5 bg-gray-600 rounded-full mx-auto mt-3"></div>
+                    <div className="w-16 h-0.5 bg-gray-600 rounded-full mx-auto mt-1.5"></div>
                   </div>
+                  {/* Laptop Shadow */}
+                  <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-[480px] h-6 bg-black/30 rounded-full blur-lg"></div>
                 </div>
 
-                {/* iPhone Mockup - Foreground, positioned to the right and slightly overlapping */}
-                <div className="absolute right-0 top-8 transform translate-x-16 rotate-2 hover:rotate-0 transition-transform duration-500 z-10">
+                {/* iPhone Mockup - Positioned to overlap like in reference */}
+                <div className="absolute right-0 top-12 transform translate-x-20 rotate-2 hover:rotate-0 transition-transform duration-500 z-10">
                   <div className="w-56 h-[480px] bg-black rounded-[2.5rem] p-2 shadow-2xl"
                        style={{
                          boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.1)',
@@ -214,7 +216,7 @@ const ProductsSection = () => {
               <div className="absolute -bottom-8 -left-6 w-12 h-12 bg-blue-500/10 rounded-full blur-md"></div>
               
               {/* Ground Shadow */}
-              <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 w-96 h-16 bg-black/20 rounded-full blur-xl"></div>
+              <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-[500px] h-12 bg-black/20 rounded-full blur-xl"></div>
             </div>
           </div>
         </div>
