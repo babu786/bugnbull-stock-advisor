@@ -111,10 +111,10 @@ const ProductsSection = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h3 className="text-3xl font-bold mb-6">
-                Trade anywhere with our <span className="gradient-text">mobile app</span>
+                Trade anywhere with our <span className="gradient-text">trading platform</span>
               </h3>
               <p className="text-lg text-muted-foreground mb-8">
-                Get real-time market data, execute trades, and manage your portfolio from anywhere in the world.
+                Get real-time market data, execute trades, and manage your portfolio from anywhere with our mobile app and web platform.
               </p>
               
               <div className="grid sm:grid-cols-2 gap-6 mb-8">
@@ -141,45 +141,72 @@ const ProductsSection = () => {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button size="lg" className="bg-gradient-primary hover:opacity-90 transition-opacity">
-                  Download for iOS
+                  Try Web Platform
                 </Button>
                 <Button variant="outline" size="lg">
-                  Download for Android
+                  Download Mobile App
                 </Button>
               </div>
             </div>
             
             <div className="relative">
-              {/* iPhone Frame with 3D Effect */}
-              <div className="w-72 h-[600px] bg-black rounded-[3rem] mx-auto p-2 shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500 relative z-10"
-                   style={{
-                     boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.1)',
-                     background: 'linear-gradient(145deg, #1a1a1a 0%, #0f0f0f 100%)'
-                   }}>
+              <div className="flex items-center justify-center space-x-8">
                 
-                {/* iPhone Reflection/Shine Effect */}
-                <div className="absolute inset-0 rounded-[3rem] bg-gradient-to-br from-white/10 via-transparent to-transparent pointer-events-none"></div>
-                
-                {/* iPhone Screen */}
-                <div className="w-full h-full bg-white rounded-[2.5rem] relative overflow-hidden"
-                     style={{
-                       boxShadow: 'inset 0 2px 4px rgba(0, 0, 0, 0.1)'
-                     }}>
-                  {/* iPhone Notch */}
-                  <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-6 bg-black rounded-b-xl z-20"
+                {/* Laptop Mockup */}
+                <div className="relative transform -rotate-2 hover:rotate-0 transition-transform duration-500">
+                  {/* Laptop Screen */}
+                  <div className="w-80 h-52 bg-gray-800 rounded-t-lg p-2 shadow-2xl">
+                    <div className="w-full h-full bg-white rounded-lg overflow-hidden relative">
+                      <img 
+                        src="/lovable-uploads/3a1e8268-ead3-41f4-aac9-092553874446.png" 
+                        alt="BUGnBULL Web Platform" 
+                        className="w-full h-full object-cover object-top"
+                      />
+                    </div>
+                  </div>
+                  {/* Laptop Base */}
+                  <div className="w-96 h-6 bg-gray-700 rounded-b-xl -mt-1 shadow-lg"
                        style={{
-                         boxShadow: '0 2px 4px rgba(0, 0, 0, 0.3)'
-                       }}></div>
+                         background: 'linear-gradient(145deg, #374151 0%, #1f2937 100%)'
+                       }}>
+                    <div className="w-16 h-1 bg-gray-600 rounded-full mx-auto mt-2"></div>
+                  </div>
+                  {/* Laptop Shadow */}
+                  <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-80 h-8 bg-black/20 rounded-full blur-xl"></div>
+                </div>
+
+                {/* iPhone Mockup */}
+                <div className="w-48 h-96 bg-black rounded-[2rem] p-1.5 shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-500 relative z-10"
+                     style={{
+                       boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.1)',
+                       background: 'linear-gradient(145deg, #1a1a1a 0%, #0f0f0f 100%)'
+                     }}>
                   
-                  {/* Screen Content - App Screenshot */}
-                  <div className="w-full h-full rounded-[2.5rem] overflow-hidden">
-                    <img 
-                      src="/lovable-uploads/4cf8dc96-8d6c-446d-9d31-d03761cd7a8f.png" 
-                      alt="BUGnBULL Mobile App Screenshot" 
-                      className="w-full h-full object-cover object-top"
-                    />
+                  {/* iPhone Reflection/Shine Effect */}
+                  <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-br from-white/10 via-transparent to-transparent pointer-events-none"></div>
+                  
+                  {/* iPhone Screen */}
+                  <div className="w-full h-full bg-white rounded-[1.75rem] relative overflow-hidden"
+                       style={{
+                         boxShadow: 'inset 0 2px 4px rgba(0, 0, 0, 0.1)'
+                       }}>
+                    {/* iPhone Notch */}
+                    <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-24 h-4 bg-black rounded-b-lg z-20"
+                         style={{
+                           boxShadow: '0 2px 4px rgba(0, 0, 0, 0.3)'
+                         }}></div>
+                    
+                    {/* Screen Content - App Screenshot */}
+                    <div className="w-full h-full rounded-[1.75rem] overflow-hidden">
+                      <img 
+                        src="/lovable-uploads/4cf8dc96-8d6c-446d-9d31-d03761cd7a8f.png" 
+                        alt="BUGnBULL Mobile App Screenshot" 
+                        className="w-full h-full object-cover object-top"
+                      />
+                    </div>
                   </div>
                 </div>
+                
               </div>
               
               {/* Floating Elements for 3D Effect */}
@@ -187,7 +214,7 @@ const ProductsSection = () => {
               <div className="absolute -bottom-8 -left-6 w-12 h-12 bg-blue-500/10 rounded-full blur-md"></div>
               
               {/* Ground Shadow */}
-              <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 w-64 h-16 bg-black/20 rounded-full blur-xl"></div>
+              <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 w-80 h-16 bg-black/20 rounded-full blur-xl"></div>
             </div>
           </div>
         </div>
