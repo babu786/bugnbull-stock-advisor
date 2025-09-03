@@ -22,7 +22,18 @@ const ContactPopup = ({ children }: ContactPopupProps) => {
   };
 
   const handleEmail = () => {
-    window.open(`mailto:${email}`, '_self');
+    // Try to open mailto link, with fallback for mobile
+    try {
+      const mailtoLink = `mailto:${email}`;
+      window.location.href = mailtoLink;
+    } catch (error) {
+      // Fallback: copy email to clipboard and show alert
+      navigator.clipboard.writeText(email).then(() => {
+        alert(`Email address copied to clipboard: ${email}`);
+      }).catch(() => {
+        alert(`Please send email to: ${email}`);
+      });
+    }
   };
 
   return (

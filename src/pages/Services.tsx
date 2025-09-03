@@ -300,7 +300,18 @@ const Services = () => {
                 variant="outline" 
                 size="lg" 
                 className="bg-transparent border border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 text-sm sm:text-lg px-4 sm:px-8"
-                onClick={() => window.open('mailto:contact@bugnbull.com', '_self')}
+                onClick={() => {
+                  try {
+                    const mailtoLink = 'mailto:contact@bugnbull.com';
+                    window.location.href = mailtoLink;
+                  } catch (error) {
+                    navigator.clipboard.writeText('contact@bugnbull.com').then(() => {
+                      alert('Email address copied to clipboard: contact@bugnbull.com');
+                    }).catch(() => {
+                      alert('Please send email to: contact@bugnbull.com');
+                    });
+                  }
+                }}
               >
                 <Mail className="w-4 h-4 sm:w-5 sm:h-5 mr-1 sm:mr-2" />
                 <span className="hidden sm:inline">Email Us</span>
