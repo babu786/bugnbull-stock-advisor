@@ -29,42 +29,42 @@ const Footer = () => {
     <footer className="bg-muted/30 border-t border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="py-16">
-            <div className="grid lg:grid-cols-5 gap-8 lg:gap-12">
-            {/* Brand Section */}
-            <div className="lg:col-span-2 text-center lg:text-left">
-              <div className="flex items-center justify-center lg:justify-start space-x-2 mb-6">
-                <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
-                  <TrendingUp className="w-5 h-5 text-white" />
-                </div>
-                <span className="text-xl sm:text-2xl font-bold gradient-text">BUGnBULL</span>
+          {/* Brand Section */}
+          <div className="text-center lg:text-left mb-12 lg:mb-16">
+            <div className="flex items-center justify-center lg:justify-start space-x-2 mb-6">
+              <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
+                <TrendingUp className="w-5 h-5 text-white" />
               </div>
-              
-              <p className="text-sm sm:text-base text-muted-foreground mb-6 max-w-md mx-auto lg:mx-0">
-                Empowering investors with intelligent trading solutions, automated portfolios, 
-                and cutting-edge financial technology. Start your investment journey today.
-              </p>
+              <span className="text-xl sm:text-2xl font-bold gradient-text">BUGnBULL</span>
+            </div>
+            
+            <p className="text-sm sm:text-base text-muted-foreground mb-6 max-w-md mx-auto lg:mx-0">
+              Empowering investors with intelligent trading solutions, automated portfolios, 
+              and cutting-edge financial technology. Start your investment journey today.
+            </p>
 
-              <div className="space-y-3">
-                <ContactPopup>
-                  <div className="flex items-center justify-center lg:justify-start space-x-3 text-muted-foreground hover:text-primary cursor-pointer transition-colors">
-                    <Mail className="w-4 h-4" />
-                    <span className="text-sm sm:text-base">contact@bugnbull.com</span>
-                  </div>
-                </ContactPopup>
-                <ContactPopup>
-                  <div className="flex items-center justify-center lg:justify-start space-x-3 text-muted-foreground hover:text-primary cursor-pointer transition-colors">
-                    <Phone className="w-4 h-4" />
-                    <span className="text-sm sm:text-base">+918764551955</span>
-                  </div>
-                </ContactPopup>
-                <div className="flex items-center justify-center lg:justify-start space-x-3 text-muted-foreground">
-                  <MapPin className="w-4 h-4" />
-                  <span className="text-sm sm:text-base">San Francisco, CA</span>
+            <div className="space-y-3">
+              <ContactPopup>
+                <div className="flex items-center justify-center lg:justify-start space-x-3 text-muted-foreground hover:text-primary cursor-pointer transition-colors">
+                  <Mail className="w-4 h-4" />
+                  <span className="text-sm sm:text-base">contact@bugnbull.com</span>
                 </div>
+              </ContactPopup>
+              <ContactPopup>
+                <div className="flex items-center justify-center lg:justify-start space-x-3 text-muted-foreground hover:text-primary cursor-pointer transition-colors">
+                  <Phone className="w-4 h-4" />
+                  <span className="text-sm sm:text-base">+918764551955</span>
+                </div>
+              </ContactPopup>
+              <div className="flex items-center justify-center lg:justify-start space-x-3 text-muted-foreground">
+                <MapPin className="w-4 h-4" />
+                <span className="text-sm sm:text-base">San Francisco, CA</span>
               </div>
             </div>
+          </div>
 
-            {/* Links Sections */}
+          {/* Links Sections - Mobile: 2 cols, Desktop: flexible */}
+          <div className="grid grid-cols-2 lg:grid-cols-2 gap-8 lg:gap-12 lg:max-w-2xl">
             {footerSections.map((section, index) => (
               <div key={index} className="text-center lg:text-left">
                 <h3 className="font-semibold text-foreground mb-4 text-sm sm:text-base">{section.title}</h3>
