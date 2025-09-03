@@ -1,8 +1,11 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { TrendingUp, Shield, Zap, Target, BarChart, Smartphone } from 'lucide-react';
+import { useState } from 'react';
 
 const ProductsSection = () => {
+  const [selectedPlatform, setSelectedPlatform] = useState<string | null>(null);
   const products = [
     {
       category: "SIP",
@@ -140,12 +143,47 @@ const ProductsSection = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-gradient-primary hover:opacity-90 transition-opacity">
-                  AngelOne
-                </Button>
-                <Button variant="outline" size="lg" className="bg-success text-success-foreground hover:bg-success/90 border-success">
-                  Assetplus
-                </Button>
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <Button size="lg" className="bg-gradient-primary hover:opacity-90 transition-opacity">
+                      AngelOne
+                    </Button>
+                  </DialogTrigger>
+                  <DialogContent className="sm:max-w-md">
+                    <DialogHeader>
+                      <DialogTitle>Download AngelOne App</DialogTitle>
+                    </DialogHeader>
+                    <div className="flex flex-col gap-4 py-4">
+                      <Button className="w-full" variant="outline">
+                        📱 Download for Android
+                      </Button>
+                      <Button className="w-full" variant="outline">
+                        🍎 Download for iOS
+                      </Button>
+                    </div>
+                  </DialogContent>
+                </Dialog>
+                
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <Button variant="outline" size="lg" className="bg-success text-success-foreground hover:bg-success/90 border-success">
+                      Assetplus
+                    </Button>
+                  </DialogTrigger>
+                  <DialogContent className="sm:max-w-md">
+                    <DialogHeader>
+                      <DialogTitle>Download Assetplus App</DialogTitle>
+                    </DialogHeader>
+                    <div className="flex flex-col gap-4 py-4">
+                      <Button className="w-full" variant="outline">
+                        📱 Download for Android
+                      </Button>
+                      <Button className="w-full" variant="outline">
+                        🍎 Download for iOS
+                      </Button>
+                    </div>
+                  </DialogContent>
+                </Dialog>
               </div>
             </div>
             
