@@ -30,7 +30,7 @@ const ContactPopup = ({ children }: ContactPopupProps) => {
       <DialogTrigger asChild>
         {children}
       </DialogTrigger>
-      <DialogContent className="sm:max-w-md w-[95vw] max-w-[350px]">
+      <DialogContent className="sm:max-w-md w-[95vw] max-w-[350px] rounded-xl sm:rounded-lg">
         <DialogHeader>
           <DialogTitle className="text-center text-lg sm:text-xl font-bold">
             Contact <span className="gradient-text">BUGnBULL</span>
