@@ -156,13 +156,13 @@ const ProductsSection = () => {
                 <div className="w-full h-full bg-white rounded-[2.5rem] relative overflow-hidden">
                   <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-6 bg-black rounded-b-xl z-10"></div>
                   
-                  {/* Screen Content - Placeholder for your app screenshot */}
-                  <div className="w-full h-full bg-gradient-to-b from-slate-100 to-slate-200 flex items-center justify-center rounded-[2.5rem]">
-                    <div className="text-center text-slate-600">
-                      <Smartphone className="w-16 h-16 mx-auto mb-4" />
-                      <p className="text-lg font-semibold">BUGnBULL App</p>
-                      <p className="text-sm opacity-70">Insert your screenshot here</p>
-                    </div>
+                  {/* Screen Content - App Screenshot */}
+                  <div className="w-full h-full rounded-[2.5rem] overflow-hidden">
+                    <img 
+                      src="/lovable-uploads/de0efbf3-e25f-4be6-8ba8-f01dab391ad9.png" 
+                      alt="BUGnBULL App Screenshot" 
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 </div>
               </div>
