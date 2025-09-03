@@ -40,33 +40,39 @@ const ContactPopup = ({ children }: ContactPopupProps) => {
         <div className="space-y-3 sm:space-y-4 py-4">
           <Button 
             onClick={handlePhoneCall}
-            className="w-full h-12 sm:h-14 bg-gradient-primary hover:opacity-90 text-base sm:text-lg"
+            className="w-full h-12 sm:h-14 bg-gradient-primary hover:opacity-90 text-base sm:text-lg flex items-center justify-center gap-2"
             size="lg"
           >
-            <Phone className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3" />
-            Call Now
-            <span className="ml-2 text-xs sm:text-sm opacity-80">{phoneNumber}</span>
+            <Phone className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
+            <div className="flex flex-col items-center min-w-0">
+              <span className="font-medium">Call Now</span>
+              <span className="text-xs opacity-80 truncate">{phoneNumber}</span>
+            </div>
           </Button>
 
           <Button 
             onClick={handleWhatsApp}
-            className="w-full h-12 sm:h-14 bg-success text-success-foreground hover:bg-success/90 text-base sm:text-lg"
+            className="w-full h-12 sm:h-14 bg-success text-success-foreground hover:bg-success/90 text-base sm:text-lg flex items-center justify-center gap-2"
             size="lg"
           >
-            <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3" />
-            WhatsApp
-            <span className="ml-2 text-xs sm:text-sm opacity-80">{whatsappNumber}</span>
+            <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
+            <div className="flex flex-col items-center min-w-0">
+              <span className="font-medium">WhatsApp</span>
+              <span className="text-xs opacity-80 truncate">{whatsappNumber}</span>
+            </div>
           </Button>
 
           <Button 
             onClick={handleEmail}
             variant="outline"
-            className="w-full h-12 sm:h-14 text-base sm:text-lg"
+            className="w-full h-12 sm:h-14 text-base sm:text-lg flex items-center justify-center gap-2"
             size="lg"
           >
-            <Mail className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3" />
-            Send Email
-            <span className="ml-2 text-xs sm:text-sm opacity-80">{email}</span>
+            <Mail className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
+            <div className="flex flex-col items-center min-w-0">
+              <span className="font-medium">Send Email</span>
+              <span className="text-xs opacity-80 truncate">{email}</span>
+            </div>
           </Button>
         </div>
 
