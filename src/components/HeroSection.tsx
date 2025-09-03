@@ -1,0 +1,136 @@
+import { Button } from '@/components/ui/button';
+import { TrendingUp, Shield, Zap, Award } from 'lucide-react';
+
+const HeroSection = () => {
+  return (
+    <section className="relative bg-gradient-hero py-20 lg:py-32 overflow-hidden">
+      <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left Column - Content */}
+          <div className="text-center lg:text-left animate-fade-in-up">
+            <h1 className="text-5xl lg:text-6xl font-bold leading-tight mb-6">
+              <span className="gradient-text">Smart investing</span>
+              <br />
+              <span className="text-foreground">made simple.</span>
+            </h1>
+            
+            <p className="text-xl text-muted-foreground mb-8 leading-relaxed max-w-2xl">
+              Join thousands of investors who trust BUGnBULL for intelligent portfolio management, 
+              automated trading strategies, and expert market insights.
+            </p>
+
+            {/* Key Features */}
+            <div className="grid sm:grid-cols-2 gap-4 mb-8">
+              <div className="flex items-center space-x-3">
+                <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                  <TrendingUp className="w-5 h-5 text-primary" />
+                </div>
+                <div className="text-left">
+                  <p className="font-semibold">Expert Strategies</p>
+                  <p className="text-sm text-muted-foreground">AI-powered portfolios</p>
+                </div>
+              </div>
+              
+              <div className="flex items-center space-x-3">
+                <div className="w-10 h-10 bg-success/10 rounded-lg flex items-center justify-center">
+                  <Shield className="w-5 h-5 text-success" />
+                </div>
+                <div className="text-left">
+                  <p className="font-semibold">Secure Trading</p>
+                  <p className="text-sm text-muted-foreground">Bank-level security</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <Button size="lg" className="bg-gradient-primary hover:opacity-90 transition-opacity text-lg px-8">
+                Start Investing
+              </Button>
+              <Button variant="outline" size="lg" className="text-lg px-8">
+                Learn More
+              </Button>
+            </div>
+
+            <p className="text-sm text-muted-foreground mt-4">
+              *No minimum investment required. Start with as little as $1.
+            </p>
+          </div>
+
+          {/* Right Column - Visual */}
+          <div className="relative lg:pl-8">
+            <div className="relative bg-card border border-border rounded-2xl shadow-lg p-6 lg:p-8">
+              {/* Portfolio Performance Mock */}
+              <div className="mb-6">
+                <div className="flex items-center justify-between mb-4">
+                  <h3 className="text-lg font-semibold">Portfolio Performance</h3>
+                  <div className="flex items-center space-x-2">
+                    <TrendingUp className="w-4 h-4 text-bull" />
+                    <span className="text-bull font-semibold">+12.4%</span>
+                  </div>
+                </div>
+                
+                <div className="space-y-3">
+                  <div className="flex justify-between items-center">
+                    <span className="text-sm text-muted-foreground">Total Value</span>
+                    <span className="font-semibold">$24,567.89</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-sm text-muted-foreground">Today's Return</span>
+                    <span className="text-bull font-semibold">+$245.67</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Asset Allocation */}
+              <div className="space-y-3">
+                <h4 className="font-semibold text-sm text-muted-foreground">Asset Allocation</h4>
+                {[
+                  { name: 'Tech Stocks', percentage: 45, color: 'bg-primary' },
+                  { name: 'Bonds', percentage: 30, color: 'bg-success' },
+                  { name: 'Real Estate', percentage: 15, color: 'bg-warning' },
+                  { name: 'Cash', percentage: 10, color: 'bg-muted' },
+                ].map((asset) => (
+                  <div key={asset.name} className="space-y-2">
+                    <div className="flex justify-between text-sm">
+                      <span>{asset.name}</span>
+                      <span className="font-semibold">{asset.percentage}%</span>
+                    </div>
+                    <div className="w-full bg-muted rounded-full h-2">
+                      <div 
+                        className={`h-2 rounded-full ${asset.color}`}
+                        style={{ width: `${asset.percentage}%` }}
+                      ></div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Trust Indicators */}
+              <div className="flex items-center justify-between mt-6 pt-6 border-t border-border">
+                <div className="flex items-center space-x-2">
+                  <Shield className="w-4 h-4 text-success" />
+                  <span className="text-xs text-muted-foreground">FDIC Insured</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Award className="w-4 h-4 text-primary" />
+                  <span className="text-xs text-muted-foreground">Award Winning</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Floating Elements */}
+            <div className="absolute -top-4 -right-4 bg-success text-success-foreground rounded-lg px-3 py-2 shadow-lg">
+              <div className="flex items-center space-x-1">
+                <Zap className="w-4 h-4" />
+                <span className="text-sm font-semibold">Live Trading</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default HeroSection;

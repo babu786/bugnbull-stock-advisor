@@ -2,41 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* BUGnBULL Financial Platform Design System
+All colors MUST be HSL for consistent theming across light/dark modes.
 */
 
 @layer base {
   :root {
+    /* Base colors - Clean financial platform theme */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 224 9% 9%;
 
+    /* Surface colors */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
+    --card-foreground: 224 9% 9%;
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 224 9% 9%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Brand colors - Professional finance purple/blue */
+    --primary: 249 87% 62%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 249 100% 85%;
+    --primary-dark: 249 87% 45%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary colors - Supporting purple tones */
+    --secondary: 250 20% 96%;
+    --secondary-foreground: 224 9% 9%;
+    --accent: 250 50% 96%;
+    --accent-foreground: 224 9% 9%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Neutral colors */
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 4% 46%;
+    --border: 240 6% 90%;
+    --input: 240 6% 90%;
+    --ring: 249 87% 62%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Status colors */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Financial specific colors */
+    --bull-green: 142 76% 36%;
+    --bear-red: 0 84% 60%;
+    --neutral-gray: 240 4% 46%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(249 87% 62%) 0%, hsl(262 83% 58%) 100%);
+    --gradient-success: linear-gradient(135deg, hsl(142 76% 36%) 0%, hsl(158 64% 52%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(249 100% 95%) 0%, hsl(262 100% 95%) 50%, hsl(0 0% 100%) 100%);
 
-    --radius: 0.5rem;
+    /* Shadows and effects */
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.1);
+    --shadow-glow: 0 0 0 1px hsl(249 87% 62% / 0.2);
+
+    /* Border radius */
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -56,33 +82,50 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Dark mode - Professional dark financial interface */
+    --background: 224 15% 8%;
+    --foreground: 0 0% 95%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 224 12% 12%;
+    --card-foreground: 0 0% 95%;
+    --popover: 224 12% 12%;
+    --popover-foreground: 0 0% 95%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --primary: 249 87% 62%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 249 100% 75%;
+    --primary-dark: 249 87% 35%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 224 12% 15%;
+    --secondary-foreground: 0 0% 95%;
+    --accent: 224 12% 15%;
+    --accent-foreground: 0 0% 95%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --muted: 224 12% 15%;
+    --muted-foreground: 240 5% 65%;
+    --border: 224 12% 18%;
+    --input: 224 12% 18%;
+    --ring: 249 87% 62%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --success: 142 76% 45%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 60%;
+    --warning-foreground: 0 0% 0%;
+    --destructive: 0 84% 65%;
+    --destructive-foreground: 0 0% 100%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --bull-green: 142 76% 45%;
+    --bear-red: 0 84% 65%;
+    --neutral-gray: 240 5% 65%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --gradient-primary: linear-gradient(135deg, hsl(249 87% 62%) 0%, hsl(262 83% 58%) 100%);
+    --gradient-success: linear-gradient(135deg, hsl(142 76% 45%) 0%, hsl(158 64% 60%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(224 15% 10%) 0%, hsl(249 50% 15%) 50%, hsl(224 15% 8%) 100%);
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.3);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.4);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.5);
+    --shadow-glow: 0 0 0 1px hsl(249 87% 62% / 0.3);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -100,6 +143,76 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  /* Custom scrollbar for financial tables and components */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--border));
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground));
+  }
+}
+
+@layer components {
+  /* Financial data display animations */
+  .animate-price-up {
+    @apply text-green-500;
+    animation: priceUp 0.6s ease-out;
+  }
+
+  .animate-price-down {
+    @apply text-red-500;
+    animation: priceDown 0.6s ease-out;
+  }
+
+  /* Gradient text for hero sections */
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+@layer utilities {
+  /* Custom animations */
+  @keyframes priceUp {
+    0% { transform: scale(1); color: hsl(var(--bull-green)); }
+    50% { transform: scale(1.1); color: hsl(var(--bull-green)); }
+    100% { transform: scale(1); color: hsl(var(--bull-green)); }
+  }
+
+  @keyframes priceDown {
+    0% { transform: scale(1); color: hsl(var(--bear-red)); }
+    50% { transform: scale(1.1); color: hsl(var(--bear-red)); }
+    100% { transform: scale(1); color: hsl(var(--bear-red)); }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
   }
 }
