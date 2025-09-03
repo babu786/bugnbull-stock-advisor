@@ -17,7 +17,8 @@ const ContactPopup = ({ children }: ContactPopupProps) => {
   };
 
   const handleWhatsApp = () => {
-    window.open(`https://wa.me/${whatsappNumber.replace('+', '')}`, '_blank');
+    const message = encodeURIComponent('Hello! I am interested in BUGnBULL investment advisory services.');
+    window.open(`https://wa.me/918764551955?text=${message}`, '_blank');
   };
 
   const handleEmail = () => {
