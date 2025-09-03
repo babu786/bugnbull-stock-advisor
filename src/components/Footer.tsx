@@ -45,14 +45,18 @@ const Footer = () => {
               </p>
 
               <div className="space-y-3">
-                <div className="flex items-center space-x-3 text-muted-foreground">
-                  <Mail className="w-4 h-4" />
-                  <span>support@bugnbull.com</span>
-                </div>
-                <div className="flex items-center space-x-3 text-muted-foreground">
-                  <Phone className="w-4 h-4" />
-                  <span>1-800-BUG-BULL</span>
-                </div>
+                <ContactPopup>
+                  <div className="flex items-center space-x-3 text-muted-foreground hover:text-primary cursor-pointer transition-colors">
+                    <Mail className="w-4 h-4" />
+                    <span>contact@bugnbull.com</span>
+                  </div>
+                </ContactPopup>
+                <ContactPopup>
+                  <div className="flex items-center space-x-3 text-muted-foreground hover:text-primary cursor-pointer transition-colors">
+                    <Phone className="w-4 h-4" />
+                    <span>+918764551955</span>
+                  </div>
+                </ContactPopup>
                 <div className="flex items-center space-x-3 text-muted-foreground">
                   <MapPin className="w-4 h-4" />
                   <span>San Francisco, CA</span>
@@ -67,12 +71,23 @@ const Footer = () => {
                 <ul className="space-y-3">
                   {section.links.map((link, linkIndex) => (
                     <li key={linkIndex}>
-                      <a 
-                        href="#" 
-                        className="text-muted-foreground hover:text-foreground transition-colors duration-200"
-                      >
-                        {link}
-                      </a>
+                      {link === "Contact" ? (
+                        <ContactPopup>
+                          <a 
+                            href="#" 
+                            className="text-muted-foreground hover:text-foreground transition-colors duration-200 cursor-pointer"
+                          >
+                            {link}
+                          </a>
+                        </ContactPopup>
+                      ) : (
+                        <a 
+                          href="#" 
+                          className="text-muted-foreground hover:text-foreground transition-colors duration-200"
+                        >
+                          {link}
+                        </a>
+                      )}
                     </li>
                   ))}
                 </ul>
