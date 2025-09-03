@@ -150,12 +150,26 @@ const ProductsSection = () => {
             </div>
             
             <div className="relative">
-              {/* iPhone Frame */}
-              <div className="w-72 h-[600px] bg-black rounded-[3rem] mx-auto p-2 shadow-2xl">
+              {/* iPhone Frame with 3D Effect */}
+              <div className="w-72 h-[600px] bg-black rounded-[3rem] mx-auto p-2 shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500 relative z-10"
+                   style={{
+                     boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.1)',
+                     background: 'linear-gradient(145deg, #1a1a1a 0%, #0f0f0f 100%)'
+                   }}>
+                
+                {/* iPhone Reflection/Shine Effect */}
+                <div className="absolute inset-0 rounded-[3rem] bg-gradient-to-br from-white/10 via-transparent to-transparent pointer-events-none"></div>
+                
                 {/* iPhone Screen */}
-                <div className="w-full h-full bg-white rounded-[2.5rem] relative overflow-hidden">
+                <div className="w-full h-full bg-white rounded-[2.5rem] relative overflow-hidden"
+                     style={{
+                       boxShadow: 'inset 0 2px 4px rgba(0, 0, 0, 0.1)'
+                     }}>
                   {/* iPhone Notch */}
-                  <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-6 bg-black rounded-b-xl z-20"></div>
+                  <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-6 bg-black rounded-b-xl z-20"
+                       style={{
+                         boxShadow: '0 2px 4px rgba(0, 0, 0, 0.3)'
+                       }}></div>
                   
                   {/* Status Bar */}
                   <div className="absolute top-0 left-0 right-0 h-12 bg-transparent z-10 flex items-center justify-between px-6 pt-2">
@@ -194,6 +208,13 @@ const ProductsSection = () => {
                   </div>
                 </div>
               </div>
+              
+              {/* Floating Elements for 3D Effect */}
+              <div className="absolute -top-4 -right-4 w-8 h-8 bg-primary/20 rounded-full blur-sm animate-pulse"></div>
+              <div className="absolute -bottom-8 -left-6 w-12 h-12 bg-blue-500/10 rounded-full blur-md"></div>
+              
+              {/* Ground Shadow */}
+              <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 w-64 h-16 bg-black/20 rounded-full blur-xl"></div>
             </div>
           </div>
         </div>
