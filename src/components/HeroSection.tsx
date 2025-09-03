@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { TrendingUp, Shield, Zap, Award } from 'lucide-react';
+import { TrendingUp, Shield, Award } from 'lucide-react';
 
 const HeroSection = () => {
   return (
@@ -89,7 +89,7 @@ const HeroSection = () => {
                   { name: 'Tech Stocks', percentage: 45, color: 'bg-primary' },
                   { name: 'Bonds', percentage: 30, color: 'bg-success' },
                   { name: 'Real Estate', percentage: 15, color: 'bg-warning' },
-                  { name: 'Cash', percentage: 10, color: 'bg-secondary' },
+                  { name: 'Cash', percentage: 10, color: 'bg-accent' },
                 ].map((asset) => (
                   <div key={asset.name} className="space-y-2">
                     <div className="flex justify-between text-sm">
