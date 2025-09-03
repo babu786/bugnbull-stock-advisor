@@ -4,7 +4,7 @@ import { TrendingUp, Shield, Zap, Award } from 'lucide-react';
 const HeroSection = () => {
   return (
     <section className="relative bg-gradient-hero py-20 lg:py-32 overflow-hidden">
-      <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
+      <div className="absolute inset-0 opacity-5"></div>
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Content */}
