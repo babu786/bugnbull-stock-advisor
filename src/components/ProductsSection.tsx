@@ -149,24 +149,69 @@ const ProductsSection = () => {
                       AngelOne
                     </Button>
                   </DialogTrigger>
-                  <DialogContent className="sm:max-w-lg">
-                    <DialogHeader className="text-center pb-4">
-                      <DialogTitle className="text-2xl font-bold gradient-text">Download AngelOne</DialogTitle>
-                      <p className="text-muted-foreground mt-2">Start trading with India's leading investment platform</p>
-                    </DialogHeader>
-                    <div className="space-y-4 py-6">
-                      <div className="grid grid-cols-2 gap-4">
-                        <Button className="h-16 flex flex-col items-center justify-center space-y-2 bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-white border-0">
-                          <Download className="w-5 h-5" />
-                          <span className="text-sm font-semibold">Android</span>
-                        </Button>
-                        <Button className="h-16 flex flex-col items-center justify-center space-y-2 bg-gradient-to-r from-secondary to-secondary/80 hover:from-secondary/90 hover:to-secondary/70 text-secondary-foreground border-0">
-                          <Download className="w-5 h-5" />
-                          <span className="text-sm font-semibold">iOS</span>
-                        </Button>
+                  <DialogContent className="sm:max-w-2xl">
+                    <div className="relative">
+                      {/* Header with gradient background */}
+                      <div className="bg-gradient-hero rounded-t-lg -m-6 mb-0 p-8 text-center">
+                        <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                          <TrendingUp className="w-8 h-8 text-white" />
+                        </div>
+                        <DialogTitle className="text-3xl font-bold text-white mb-2">AngelOne</DialogTitle>
+                        <p className="text-white/80">India's Leading Investment Platform</p>
                       </div>
-                      <div className="text-center text-xs text-muted-foreground border-t pt-4">
-                        <p>Available on Google Play Store & Apple App Store</p>
+                      
+                      {/* Content */}
+                      <div className="p-6 pt-8">
+                        <div className="text-center mb-8">
+                          <h3 className="text-xl font-semibold mb-3">Download Mobile App</h3>
+                          <p className="text-muted-foreground">Trade stocks, mutual funds, and more with zero brokerage</p>
+                        </div>
+                        
+                        {/* Features grid */}
+                        <div className="grid grid-cols-3 gap-4 mb-8 p-4 bg-muted/20 rounded-lg">
+                          <div className="text-center">
+                            <Shield className="w-6 h-6 text-primary mx-auto mb-2" />
+                            <p className="text-xs font-medium">Secure</p>
+                          </div>
+                          <div className="text-center">
+                            <Zap className="w-6 h-6 text-primary mx-auto mb-2" />
+                            <p className="text-xs font-medium">Fast Trading</p>
+                          </div>
+                          <div className="text-center">
+                            <BarChart className="w-6 h-6 text-primary mx-auto mb-2" />
+                            <p className="text-xs font-medium">Analytics</p>
+                          </div>
+                        </div>
+                        
+                        {/* Download buttons */}
+                        <div className="grid grid-cols-2 gap-4 mb-6">
+                          <Button className="h-20 flex flex-col items-center justify-center space-y-3 bg-gradient-to-br from-primary via-primary/90 to-primary/80 hover:from-primary/90 hover:to-primary/70 text-white border-0 rounded-xl shadow-lg">
+                            <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
+                              <Smartphone className="w-5 h-5" />
+                            </div>
+                            <div className="text-center">
+                              <p className="text-sm font-bold">Google Play</p>
+                              <p className="text-xs opacity-90">Android App</p>
+                            </div>
+                          </Button>
+                          <Button className="h-20 flex flex-col items-center justify-center space-y-3 bg-gradient-to-br from-secondary via-secondary/90 to-secondary/80 hover:from-secondary/90 hover:to-secondary/70 text-secondary-foreground border-0 rounded-xl shadow-lg">
+                            <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
+                              <Smartphone className="w-5 h-5" />
+                            </div>
+                            <div className="text-center">
+                              <p className="text-sm font-bold">App Store</p>
+                              <p className="text-xs opacity-90">iOS App</p>
+                            </div>
+                          </Button>
+                        </div>
+                        
+                        {/* Footer */}
+                        <div className="text-center text-xs text-muted-foreground border-t pt-4">
+                          <p className="flex items-center justify-center gap-2">
+                            <Shield className="w-3 h-3" />
+                            SEBI Registered • 4.5★ Rating • 1Cr+ Downloads
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </DialogContent>
@@ -178,24 +223,69 @@ const ProductsSection = () => {
                       Assetplus
                     </Button>
                   </DialogTrigger>
-                  <DialogContent className="sm:max-w-lg">
-                    <DialogHeader className="text-center pb-4">
-                      <DialogTitle className="text-2xl font-bold gradient-text">Download Assetplus</DialogTitle>
-                      <p className="text-muted-foreground mt-2">Smart investment solutions at your fingertips</p>
-                    </DialogHeader>
-                    <div className="space-y-4 py-6">
-                      <div className="grid grid-cols-2 gap-4">
-                        <Button className="h-16 flex flex-col items-center justify-center space-y-2 bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-white border-0">
-                          <Download className="w-5 h-5" />
-                          <span className="text-sm font-semibold">Android</span>
-                        </Button>
-                        <Button className="h-16 flex flex-col items-center justify-center space-y-2 bg-gradient-to-r from-secondary to-secondary/80 hover:from-secondary/90 hover:to-secondary/70 text-secondary-foreground border-0">
-                          <Download className="w-5 h-5" />
-                          <span className="text-sm font-semibold">iOS</span>
-                        </Button>
+                  <DialogContent className="sm:max-w-2xl">
+                    <div className="relative">
+                      {/* Header with gradient background */}
+                      <div className="bg-gradient-to-br from-success to-success/80 rounded-t-lg -m-6 mb-0 p-8 text-center">
+                        <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                          <Target className="w-8 h-8 text-white" />
+                        </div>
+                        <DialogTitle className="text-3xl font-bold text-white mb-2">Assetplus</DialogTitle>
+                        <p className="text-white/80">Smart Investment Solutions</p>
                       </div>
-                      <div className="text-center text-xs text-muted-foreground border-t pt-4">
-                        <p>Available on Google Play Store & Apple App Store</p>
+                      
+                      {/* Content */}
+                      <div className="p-6 pt-8">
+                        <div className="text-center mb-8">
+                          <h3 className="text-xl font-semibold mb-3">Download Mobile App</h3>
+                          <p className="text-muted-foreground">Intelligent portfolio management with AI-powered insights</p>
+                        </div>
+                        
+                        {/* Features grid */}
+                        <div className="grid grid-cols-3 gap-4 mb-8 p-4 bg-muted/20 rounded-lg">
+                          <div className="text-center">
+                            <Target className="w-6 h-6 text-success mx-auto mb-2" />
+                            <p className="text-xs font-medium">Goal Based</p>
+                          </div>
+                          <div className="text-center">
+                            <BarChart className="w-6 h-6 text-success mx-auto mb-2" />
+                            <p className="text-xs font-medium">Research</p>
+                          </div>
+                          <div className="text-center">
+                            <Shield className="w-6 h-6 text-success mx-auto mb-2" />
+                            <p className="text-xs font-medium">Trusted</p>
+                          </div>
+                        </div>
+                        
+                        {/* Download buttons */}
+                        <div className="grid grid-cols-2 gap-4 mb-6">
+                          <Button className="h-20 flex flex-col items-center justify-center space-y-3 bg-gradient-to-br from-success via-success/90 to-success/80 hover:from-success/90 hover:to-success/70 text-white border-0 rounded-xl shadow-lg">
+                            <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
+                              <Smartphone className="w-5 h-5" />
+                            </div>
+                            <div className="text-center">
+                              <p className="text-sm font-bold">Google Play</p>
+                              <p className="text-xs opacity-90">Android App</p>
+                            </div>
+                          </Button>
+                          <Button className="h-20 flex flex-col items-center justify-center space-y-3 bg-gradient-to-br from-secondary via-secondary/90 to-secondary/80 hover:from-secondary/90 hover:to-secondary/70 text-secondary-foreground border-0 rounded-xl shadow-lg">
+                            <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
+                              <Smartphone className="w-5 h-5" />
+                            </div>
+                            <div className="text-center">
+                              <p className="text-sm font-bold">App Store</p>
+                              <p className="text-xs opacity-90">iOS App</p>
+                            </div>
+                          </Button>
+                        </div>
+                        
+                        {/* Footer */}
+                        <div className="text-center text-xs text-muted-foreground border-t pt-4">
+                          <p className="flex items-center justify-center gap-2">
+                            <Shield className="w-3 h-3" />
+                            SEBI Registered • 4.8★ Rating • 50L+ Downloads
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </DialogContent>
