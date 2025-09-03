@@ -1,7 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
-import { TrendingUp, Shield, Zap, Target, BarChart, Smartphone } from 'lucide-react';
+import { TrendingUp, Shield, Zap, Target, BarChart, Smartphone, Download } from 'lucide-react';
 import { useState } from 'react';
 
 const ProductsSection = () => {
@@ -149,17 +149,25 @@ const ProductsSection = () => {
                       AngelOne
                     </Button>
                   </DialogTrigger>
-                  <DialogContent className="sm:max-w-md">
-                    <DialogHeader>
-                      <DialogTitle>Download AngelOne App</DialogTitle>
+                  <DialogContent className="sm:max-w-lg">
+                    <DialogHeader className="text-center pb-4">
+                      <DialogTitle className="text-2xl font-bold gradient-text">Download AngelOne</DialogTitle>
+                      <p className="text-muted-foreground mt-2">Start trading with India's leading investment platform</p>
                     </DialogHeader>
-                    <div className="flex flex-col gap-4 py-4">
-                      <Button className="w-full" variant="outline">
-                        📱 Download for Android
-                      </Button>
-                      <Button className="w-full" variant="outline">
-                        🍎 Download for iOS
-                      </Button>
+                    <div className="space-y-4 py-6">
+                      <div className="grid grid-cols-2 gap-4">
+                        <Button className="h-16 flex flex-col items-center justify-center space-y-2 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800">
+                          <Download className="w-5 h-5" />
+                          <span className="text-sm font-semibold">Android</span>
+                        </Button>
+                        <Button className="h-16 flex flex-col items-center justify-center space-y-2 bg-gradient-to-r from-gray-800 to-gray-900 hover:from-gray-900 hover:to-black">
+                          <Download className="w-5 h-5" />
+                          <span className="text-sm font-semibold">iOS</span>
+                        </Button>
+                      </div>
+                      <div className="text-center text-xs text-muted-foreground border-t pt-4">
+                        <p>Available on Google Play Store & Apple App Store</p>
+                      </div>
                     </div>
                   </DialogContent>
                 </Dialog>
@@ -170,17 +178,25 @@ const ProductsSection = () => {
                       Assetplus
                     </Button>
                   </DialogTrigger>
-                  <DialogContent className="sm:max-w-md">
-                    <DialogHeader>
-                      <DialogTitle>Download Assetplus App</DialogTitle>
+                  <DialogContent className="sm:max-w-lg">
+                    <DialogHeader className="text-center pb-4">
+                      <DialogTitle className="text-2xl font-bold gradient-text">Download Assetplus</DialogTitle>
+                      <p className="text-muted-foreground mt-2">Smart investment solutions at your fingertips</p>
                     </DialogHeader>
-                    <div className="flex flex-col gap-4 py-4">
-                      <Button className="w-full" variant="outline">
-                        📱 Download for Android
-                      </Button>
-                      <Button className="w-full" variant="outline">
-                        🍎 Download for iOS
-                      </Button>
+                    <div className="space-y-4 py-6">
+                      <div className="grid grid-cols-2 gap-4">
+                        <Button className="h-16 flex flex-col items-center justify-center space-y-2 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800">
+                          <Download className="w-5 h-5" />
+                          <span className="text-sm font-semibold">Android</span>
+                        </Button>
+                        <Button className="h-16 flex flex-col items-center justify-center space-y-2 bg-gradient-to-r from-gray-800 to-gray-900 hover:from-gray-900 hover:to-black">
+                          <Download className="w-5 h-5" />
+                          <span className="text-sm font-semibold">iOS</span>
+                        </Button>
+                      </div>
+                      <div className="text-center text-xs text-muted-foreground border-t pt-4">
+                        <p>Available on Google Play Store & Apple App Store</p>
+                      </div>
                     </div>
                   </DialogContent>
                 </Dialog>
