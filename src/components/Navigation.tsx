@@ -40,10 +40,10 @@ const Navigation = () => {
           {/* Action Buttons */}
           <div className="hidden md:flex items-center space-x-4">
             <Button variant="ghost" className="text-muted-foreground">
-              Log in
+              Contact Us
             </Button>
             <Button className="bg-gradient-primary hover:opacity-90 transition-opacity">
-              Get Started
+              Free Consultation
             </Button>
           </div>
 
@@ -81,10 +81,10 @@ const Navigation = () => {
               <div className="flex flex-col space-y-3 pt-4 border-t border-border">
                 <Button variant="ghost" className="justify-start">
                   <User className="w-4 h-4 mr-2" />
-                  Log in
+                  Contact Us
                 </Button>
                 <Button className="bg-gradient-primary hover:opacity-90 transition-opacity">
-                  Get Started
+                  Free Consultation
                 </Button>
               </div>
             </div>

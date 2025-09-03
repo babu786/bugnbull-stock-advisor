@@ -5,42 +5,42 @@ import { TrendingUp, Shield, Zap, Target, BarChart, Smartphone } from 'lucide-re
 const ProductsSection = () => {
   const products = [
     {
-      category: "NOW",
-      title: "Cash Account",
-      description: "High-yield cash account with instant access to your money",
-      apy: "4.50%",
-      features: ["FDIC Insured up to $250K", "No minimum balance", "Instant transfers"],
-      icon: Shield,
+      category: "SIP",
+      title: "SIP Planning",
+      description: "Systematic Investment Plan advisory for disciplined wealth creation",
+      apy: "12-15%",
+      features: ["Goal-based planning", "Auto-debit facility", "Tax saving options"],
+      icon: Target,
       gradient: "from-success/10 to-success/5",
       color: "text-success"
     },
     {
-      category: "SOON",
-      title: "Smart Portfolios",
-      description: "AI-powered portfolios that automatically rebalance and optimize",
-      apy: "~12%",
-      features: ["Automated rebalancing", "Tax-loss harvesting", "Expert strategies"],
-      icon: Target,
+      category: "MUTUAL FUNDS",
+      title: "Mutual Fund Advisory",
+      description: "Expert curated mutual fund portfolio recommendations",
+      apy: "10-18%",
+      features: ["Professional fund selection", "Regular portfolio review", "Risk assessment"],
+      icon: TrendingUp,
       gradient: "from-primary/10 to-primary/5",
       color: "text-primary"
     },
     {
-      category: "LATER",
-      title: "Growth Investing",
-      description: "Long-term investment strategies for building generational wealth",
-      apy: "~15%",
-      features: ["Growth-focused ETFs", "Retirement planning", "Dollar-cost averaging"],
-      icon: TrendingUp,
+      category: "RESEARCH",
+      title: "Market Research",
+      description: "In-depth market analysis and investment research reports",
+      apy: "Insights",
+      features: ["Daily market updates", "Stock recommendations", "Sector analysis"],
+      icon: BarChart,
       gradient: "from-warning/10 to-warning/5",
       color: "text-warning"
     },
     {
-      category: "PRO",
-      title: "Active Trading",
-      description: "Professional trading tools for experienced investors",
-      apy: "Unlimited",
-      features: ["Real-time data", "Advanced charts", "Options trading"],
-      icon: BarChart,
+      category: "ADVISORY",
+      title: "Investment Advisory",
+      description: "Personalized investment strategies and financial planning",
+      apy: "Custom",
+      features: ["One-on-one consultation", "Portfolio optimization", "Risk management"],
+      icon: Shield,
       gradient: "from-destructive/10 to-destructive/5",
       color: "text-destructive"
     }
@@ -51,10 +51,10 @@ const ProductsSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">
-            Choose your <span className="gradient-text">investment journey</span>
+            Our <span className="gradient-text">investment services</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            From cash management to active trading, we have the right solution for every investor's needs and timeline.
+            Comprehensive financial services including SIP planning, mutual fund advisory, and expert research to help you achieve your investment goals.
           </p>
         </div>
 
@@ -67,7 +67,7 @@ const ProductsSection = () => {
                 <CardHeader className="relative">
                   <div className="flex items-center justify-between mb-4">
                     <span className="text-xs font-bold text-muted-foreground tracking-wider">
-                      "{product.category}" MONEY
+                      {product.category} SERVICE
                     </span>
                     <Icon className={`w-6 h-6 ${product.color}`} />
                   </div>
@@ -75,7 +75,7 @@ const ProductsSection = () => {
                   <div className="text-3xl font-bold mb-2">
                     <span className={product.color}>{product.apy}</span>
                     <span className="text-sm text-muted-foreground ml-1">
-                      {product.apy.includes('%') ? 'APY*' : 'potential'}
+                      {product.apy.includes('%') ? 'expected returns*' : 'service'}
                     </span>
                   </div>
                 </CardHeader>
@@ -98,7 +98,7 @@ const ProductsSection = () => {
                     className="w-full group-hover:bg-gradient-primary group-hover:text-white transition-all duration-300" 
                     variant="outline"
                   >
-                    Get Started
+                    Learn More
                   </Button>
                 </CardContent>
               </Card>

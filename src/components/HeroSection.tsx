@@ -10,14 +10,14 @@ const HeroSection = () => {
           {/* Left Column - Content */}
           <div className="text-center lg:text-left animate-fade-in-up">
             <h1 className="text-5xl lg:text-6xl font-bold leading-tight mb-6">
-              <span className="gradient-text">Smart investing</span>
+              <span className="gradient-text">Professional</span>
               <br />
-              <span className="text-foreground">made simple.</span>
+              <span className="text-foreground">investment services.</span>
             </h1>
             
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed max-w-2xl">
-              Join thousands of investors who trust BUGnBULL for intelligent portfolio management, 
-              automated trading strategies, and expert market insights.
+              Expert SIP planning, mutual fund advisory, and comprehensive research services 
+              to help you achieve your financial goals with confidence.
             </p>
 
             {/* Key Features */}
@@ -45,15 +45,15 @@ const HeroSection = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button size="lg" className="bg-gradient-primary hover:opacity-90 transition-opacity text-lg px-8">
-                Start Investing
+                Get Free Consultation
               </Button>
               <Button variant="outline" size="lg" className="text-lg px-8">
-                Learn More
+                View Our Services
               </Button>
             </div>
 
             <p className="text-sm text-muted-foreground mt-4">
-              *No minimum investment required. Start with as little as $1.
+              *Personalized investment advisory tailored to your financial goals.
             </p>
           </div>
 
