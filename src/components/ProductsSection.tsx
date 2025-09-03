@@ -226,12 +226,12 @@ const ProductsSection = () => {
                   <DialogContent className="sm:max-w-2xl">
                     <div className="relative">
                       {/* Header with gradient background */}
-                      <div className="bg-gradient-to-br from-success to-success/80 rounded-t-lg -m-6 mb-0 p-8 text-center">
+                      <div className="bg-gradient-to-br from-success via-success/90 to-success/70 rounded-t-lg -m-6 mb-0 p-8 text-center">
                         <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
                           <Target className="w-8 h-8 text-white" />
                         </div>
                         <DialogTitle className="text-3xl font-bold text-white mb-2">Assetplus</DialogTitle>
-                        <p className="text-white/80">Smart Investment Solutions</p>
+                        <p className="text-white/90">Smart Investment Solutions</p>
                       </div>
                       
                       {/* Content */}
