@@ -287,27 +287,38 @@ const Services = () => {
           </p>
           
           <div className="flex flex-col gap-3 sm:gap-4">
-            <ContactPopup>
-              <Button size="lg" className="bg-white text-primary hover:bg-white/90 text-base sm:text-lg px-6 sm:px-8 w-full">
-                <Phone className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
-                Schedule Call
-              </Button>
-            </ContactPopup>
+            <Button 
+              size="lg" 
+              className="bg-white text-primary hover:bg-white/90 text-base sm:text-lg px-6 sm:px-8 w-full"
+              onClick={() => window.open('tel:+918764551955', '_self')}
+            >
+              <Phone className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
+              Schedule Call
+            </Button>
             <div className="grid grid-cols-2 gap-3 sm:gap-4">
-              <ContactPopup>
-                <Button variant="outline" size="lg" className="bg-transparent border border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 text-sm sm:text-lg px-4 sm:px-8">
-                  <Mail className="w-4 h-4 sm:w-5 sm:h-5 mr-1 sm:mr-2" />
-                  <span className="hidden sm:inline">Email Us</span>
-                  <span className="sm:hidden">Email</span>
-                </Button>
-              </ContactPopup>
-              <ContactPopup>
-                <Button variant="outline" size="lg" className="bg-transparent border border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 text-sm sm:text-lg px-4 sm:px-8">
-                  <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 mr-1 sm:mr-2" />
-                  <span className="hidden sm:inline">Live Chat</span>
-                  <span className="sm:hidden">Chat</span>
-                </Button>
-              </ContactPopup>
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="bg-transparent border border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 text-sm sm:text-lg px-4 sm:px-8"
+                onClick={() => window.open('mailto:contact@bugnbull.com', '_self')}
+              >
+                <Mail className="w-4 h-4 sm:w-5 sm:h-5 mr-1 sm:mr-2" />
+                <span className="hidden sm:inline">Email Us</span>
+                <span className="sm:hidden">Email</span>
+              </Button>
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="bg-transparent border border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 text-sm sm:text-lg px-4 sm:px-8"
+                onClick={() => {
+                  const message = encodeURIComponent('Hello! I am interested in BUGnBULL investment advisory services.');
+                  window.open(`https://wa.me/918764551955?text=${message}`, '_blank');
+                }}
+              >
+                <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 mr-1 sm:mr-2" />
+                <span className="hidden sm:inline">Live Chat</span>
+                <span className="sm:hidden">Chat</span>
+              </Button>
             </div>
           </div>
         </div>
