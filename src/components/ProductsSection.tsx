@@ -174,8 +174,8 @@ const ProductsSection = () => {
                   {/* Screen Content - App Screenshot */}
                   <div className="w-full h-full rounded-[2.5rem] overflow-hidden">
                     <img 
-                      src="/lovable-uploads/3a1e8268-ead3-41f4-aac9-092553874446.png" 
-                      alt="BUGnBULL Dashboard Screenshot" 
+                      src="/lovable-uploads/4cf8dc96-8d6c-446d-9d31-d03761cd7a8f.png" 
+                      alt="BUGnBULL Mobile App Screenshot" 
                       className="w-full h-full object-cover object-top"
                     />
                   </div>
