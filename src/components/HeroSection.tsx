@@ -51,8 +51,8 @@ const HeroSection = () => {
                   Get Free Consultation
                 </Button>
               </ContactPopup>
-              <Button variant="outline" size="lg" className="text-lg px-8">
-                View Our Services
+              <Button variant="outline" size="lg" className="text-lg px-8" asChild>
+                <Link to="/services">View Our Services</Link>
               </Button>
             </div>
 

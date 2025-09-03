@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X, TrendingUp, PieChart, BookOpen, User, Home } from 'lucide-react';
 import ContactPopup from '@/components/ContactPopup';
+import { Link } from 'react-router-dom';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
