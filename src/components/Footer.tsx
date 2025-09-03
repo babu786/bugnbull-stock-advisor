@@ -1,4 +1,5 @@
 import { TrendingUp, Mail, Phone, MapPin } from 'lucide-react';
+import ContactPopup from '@/components/ContactPopup';
 
 const Footer = () => {
   const footerSections = [

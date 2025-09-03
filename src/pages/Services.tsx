@@ -16,6 +16,7 @@ import {
   MessageCircle,
   CheckCircle
 } from 'lucide-react';
+import ContactPopup from '@/components/ContactPopup';
 
 const Services = () => {
   const services = [

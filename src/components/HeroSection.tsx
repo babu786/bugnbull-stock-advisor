@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { TrendingUp, Shield, Award } from 'lucide-react';
+import ContactPopup from '@/components/ContactPopup';
 
 const HeroSection = () => {
   return (
