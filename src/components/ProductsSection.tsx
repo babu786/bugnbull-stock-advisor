@@ -293,7 +293,7 @@ const ProductsSection = () => {
               </div>
             </div>
             
-            <div className="relative">
+            <div className="relative hidden lg:block">
               <div className="relative flex items-center justify-center">
                 
                 {/* Laptop Mockup - Borderless Design */}
