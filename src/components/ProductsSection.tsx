@@ -182,7 +182,7 @@ const ProductsSection = () => {
                         Learn More
                       </Button>
                     </DialogTrigger>
-                    <DialogContent className="sm:max-w-2xl max-h-[90vh] overflow-y-auto">
+                    <DialogContent className="sm:max-w-2xl max-h-[90vh] overflow-y-auto bg-background text-foreground">
                       <div className="relative">
                         {/* Header with gradient background */}
                         <div className={`bg-gradient-to-br ${product.gradient.replace('/10', '').replace('/5', '')} rounded-t-lg -m-6 mb-0 p-8 text-center`}>
@@ -194,7 +194,7 @@ const ProductsSection = () => {
                         </div>
                         
                         {/* Content */}
-                        <div className="p-6 pt-8">
+                        <div className="p-6 pt-8 text-foreground">
                           {/* Overview */}
                           <div className="mb-8">
                             <h3 className="text-xl font-semibold mb-3">Service Overview</h3>
