@@ -15,7 +15,26 @@ const ProductsSection = () => {
       features: ["Goal-based planning", "Auto-debit facility", "Tax saving options"],
       icon: Target,
       gradient: "from-success/10 to-success/5",
-      color: "text-success"
+      color: "text-success",
+      detailedInfo: {
+        overview: "Our SIP Planning service helps you build wealth systematically through disciplined monthly investments. Perfect for long-term financial goals like retirement, children's education, or home purchase.",
+        benefits: [
+          "Rupee cost averaging reduces market volatility impact",
+          "Compounding benefits over long investment horizons", 
+          "Flexible investment amounts starting from ₹500",
+          "Tax benefits under Section 80C for ELSS funds",
+          "Auto-debit convenience for hassle-free investing"
+        ],
+        process: [
+          "Goal assessment and risk profiling",
+          "Customized SIP portfolio recommendation", 
+          "Setting up auto-debit and KYC completion",
+          "Regular monitoring and portfolio rebalancing"
+        ],
+        minInvestment: "₹500 per month",
+        timeHorizon: "3+ years recommended",
+        expectedReturns: "12-15% annually (market linked)"
+      }
     },
     {
       category: "MUTUAL FUNDS",
@@ -25,7 +44,26 @@ const ProductsSection = () => {
       features: ["Professional fund selection", "Regular portfolio review", "Risk assessment"],
       icon: TrendingUp,
       gradient: "from-primary/10 to-primary/5",
-      color: "text-primary"
+      color: "text-primary",
+      detailedInfo: {
+        overview: "Get access to expertly curated mutual fund portfolios tailored to your risk profile and financial goals. Our research team analyzes 1000+ mutual funds to recommend the best options.",
+        benefits: [
+          "Professional fund manager selection and monitoring",
+          "Diversified portfolio across market capitalizations",
+          "Regular portfolio health checks and rebalancing",
+          "Direct mutual fund investments with zero commissions",
+          "Tax-efficient fund switching and optimization"
+        ],
+        process: [
+          "Risk profiling and investment goal mapping",
+          "Portfolio construction with selected funds",
+          "KYC completion and investment execution",
+          "Monthly reviews and performance tracking"
+        ],
+        minInvestment: "₹1,000 per fund",
+        timeHorizon: "3-5+ years",
+        expectedReturns: "10-18% annually (market linked)"
+      }
     },
     {
       category: "RESEARCH",
@@ -35,7 +73,26 @@ const ProductsSection = () => {
       features: ["Daily market updates", "Stock recommendations", "Sector analysis"],
       icon: BarChart,
       gradient: "from-warning/10 to-warning/5",
-      color: "text-warning"
+      color: "text-warning",
+      detailedInfo: {
+        overview: "Stay ahead of market trends with our comprehensive research reports, daily market analysis, and expert insights. Get actionable investment ideas backed by thorough fundamental and technical analysis.",
+        benefits: [
+          "Daily market commentary and trend analysis",
+          "Detailed stock research reports with target prices",
+          "Sector rotation and thematic investment ideas",
+          "Macroeconomic analysis and policy impact assessment",
+          "Early warning signals for portfolio risk management"
+        ],
+        process: [
+          "Market screening and opportunity identification",
+          "Fundamental and technical analysis",
+          "Risk assessment and recommendation grading",
+          "Regular follow-ups and target price updates"
+        ],
+        deliverables: "Daily reports via email/WhatsApp",
+        coverage: "500+ stocks across sectors",
+        accuracy: "75%+ recommendation success rate"
+      }
     },
     {
       category: "ADVISORY",
@@ -45,7 +102,26 @@ const ProductsSection = () => {
       features: ["One-on-one consultation", "Portfolio optimization", "Risk management"],
       icon: Shield,
       gradient: "from-destructive/10 to-destructive/5",
-      color: "text-destructive"
+      color: "text-destructive",
+      detailedInfo: {
+        overview: "Get personalized investment advisory services with dedicated relationship managers. Our holistic approach covers portfolio construction, risk management, and comprehensive financial planning.",
+        benefits: [
+          "Dedicated relationship manager for personalized service",
+          "Comprehensive financial planning and goal mapping",
+          "Tax optimization and estate planning guidance",
+          "Regular portfolio reviews and strategy adjustments",
+          "Access to exclusive investment opportunities and IPOs"
+        ],
+        process: [
+          "Detailed financial health check and goal setting",
+          "Custom portfolio construction and asset allocation",
+          "Implementation with ongoing monitoring",
+          "Quarterly reviews and strategy refinements"
+        ],
+        minPortfolioSize: "₹5 lakhs",
+        serviceLevel: "Premium advisory",
+        meetingFrequency: "Monthly one-on-one sessions"
+      }
     }
   ];
 
@@ -97,12 +173,105 @@ const ProductsSection = () => {
                     ))}
                   </ul>
                   
-                  <Button 
-                    className="w-full group-hover:bg-gradient-primary group-hover:text-white transition-all duration-300" 
-                    variant="outline"
-                  >
-                    Learn More
-                  </Button>
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <Button 
+                        className="w-full group-hover:bg-gradient-primary group-hover:text-white transition-all duration-300" 
+                        variant="outline"
+                      >
+                        Learn More
+                      </Button>
+                    </DialogTrigger>
+                    <DialogContent className="sm:max-w-2xl max-h-[90vh] overflow-y-auto">
+                      <div className="relative">
+                        {/* Header with gradient background */}
+                        <div className={`bg-gradient-to-br ${product.gradient.replace('/10', '').replace('/5', '')} rounded-t-lg -m-6 mb-0 p-8 text-center`}>
+                          <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <Icon className="w-8 h-8 text-white" />
+                          </div>
+                          <DialogTitle className="text-3xl font-bold text-white mb-2">{product.title}</DialogTitle>
+                          <p className="text-white/90">{product.category} SERVICE</p>
+                        </div>
+                        
+                        {/* Content */}
+                        <div className="p-6 pt-8">
+                          {/* Overview */}
+                          <div className="mb-8">
+                            <h3 className="text-xl font-semibold mb-3">Service Overview</h3>
+                            <p className="text-muted-foreground leading-relaxed">{product.detailedInfo.overview}</p>
+                          </div>
+                          
+                          {/* Key Benefits */}
+                          <div className="mb-8">
+                            <h3 className="text-xl font-semibold mb-4">Key Benefits</h3>
+                            <ul className="space-y-3">
+                              {product.detailedInfo.benefits.map((benefit, idx) => (
+                                <li key={idx} className="flex items-start space-x-3">
+                                  <div className={`w-2 h-2 ${product.color} rounded-full mt-2 flex-shrink-0`}></div>
+                                  <span className="text-sm text-muted-foreground">{benefit}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                          
+                          {/* Process */}
+                          <div className="mb-8">
+                            <h3 className="text-xl font-semibold mb-4">Our Process</h3>
+                            <div className="space-y-4">
+                              {product.detailedInfo.process.map((step, idx) => (
+                                <div key={idx} className="flex items-start space-x-4">
+                                  <div className={`w-8 h-8 ${product.color.replace('text-', 'bg-')}/20 rounded-full flex items-center justify-center flex-shrink-0`}>
+                                    <span className={`text-sm font-bold ${product.color}`}>{idx + 1}</span>
+                                  </div>
+                                  <span className="text-sm text-muted-foreground pt-1">{step}</span>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                          
+                          {/* Service Details */}
+                          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 p-4 bg-muted/20 rounded-lg">
+                            {product.detailedInfo.minInvestment && (
+                              <div className="text-center">
+                                <p className="text-xs font-medium text-muted-foreground">Min Investment</p>
+                                <p className={`text-sm font-bold ${product.color}`}>{product.detailedInfo.minInvestment}</p>
+                              </div>
+                            )}
+                            {product.detailedInfo.timeHorizon && (
+                              <div className="text-center">
+                                <p className="text-xs font-medium text-muted-foreground">Time Horizon</p>
+                                <p className={`text-sm font-bold ${product.color}`}>{product.detailedInfo.timeHorizon}</p>
+                              </div>
+                            )}
+                            {product.detailedInfo.expectedReturns && (
+                              <div className="text-center">
+                                <p className="text-xs font-medium text-muted-foreground">Expected Returns</p>
+                                <p className={`text-sm font-bold ${product.color}`}>{product.detailedInfo.expectedReturns}</p>
+                              </div>
+                            )}
+                            {product.detailedInfo.minPortfolioSize && (
+                              <div className="text-center">
+                                <p className="text-xs font-medium text-muted-foreground">Min Portfolio</p>
+                                <p className={`text-sm font-bold ${product.color}`}>{product.detailedInfo.minPortfolioSize}</p>
+                              </div>
+                            )}
+                            {product.detailedInfo.deliverables && (
+                              <div className="text-center">
+                                <p className="text-xs font-medium text-muted-foreground">Deliverables</p>
+                                <p className={`text-sm font-bold ${product.color}`}>{product.detailedInfo.deliverables}</p>
+                              </div>
+                            )}
+                            {product.detailedInfo.coverage && (
+                              <div className="text-center">
+                                <p className="text-xs font-medium text-muted-foreground">Coverage</p>
+                                <p className={`text-sm font-bold ${product.color}`}>{product.detailedInfo.coverage}</p>
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    </DialogContent>
+                  </Dialog>
                 </CardContent>
               </Card>
             );
