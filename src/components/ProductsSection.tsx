@@ -324,10 +324,10 @@ const ProductsSection = () => {
                    <DialogContent className="sm:max-w-2xl max-h-[90vh] overflow-y-auto bg-background text-foreground rounded-xl border border-border shadow-2xl">
                     <div className="relative">
                       {/* Header with gradient background */}
-                      <div className="relative bg-gradient-hero rounded-t-lg -m-6 mb-0 p-8 text-center">
-                        <div className="absolute inset-0 bg-black/50" aria-hidden="true"></div>
+                      <div className="relative bg-gradient-to-br from-purple-600 via-blue-600 to-indigo-700 rounded-t-lg -m-6 mb-0 p-8 text-center">
+                        <div className="absolute inset-0 bg-black/20" aria-hidden="true"></div>
                         <div className="relative z-10">
-                          <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                          <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-4">
                             <TrendingUp className="w-8 h-8 text-white" />
                           </div>
                           <DialogTitle className="text-3xl font-bold text-white drop-shadow mb-2">AngelOne</DialogTitle>
@@ -360,8 +360,8 @@ const ProductsSection = () => {
                         
                         {/* Download buttons */}
                         <div className="grid grid-cols-2 gap-4 mb-6">
-                          <Button className="group relative h-24 flex flex-col items-center justify-center space-y-2 bg-gradient-to-br from-primary via-primary/95 to-primary/80 hover:from-primary/95 hover:via-primary hover:to-primary/90 text-white border-0 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02] hover:-translate-y-1 overflow-hidden">
-                            <div className="absolute inset-0 bg-gradient-to-r from-white/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                          <Button className="group relative h-24 flex flex-col items-center justify-center space-y-2 bg-gradient-to-br from-purple-600 via-purple-500 to-indigo-600 hover:from-purple-500 hover:via-purple-400 hover:to-indigo-500 text-white border-0 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02] hover:-translate-y-1 overflow-hidden">
+                            <div className="absolute inset-0 bg-gradient-to-r from-purple-400/20 via-purple-300/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                             <div className="relative z-10 w-10 h-10 bg-white/25 backdrop-blur-sm rounded-xl flex items-center justify-center group-hover:bg-white/35 transition-all duration-300 group-hover:scale-110">
                               <Smartphone className="w-6 h-6 group-hover:rotate-12 transition-transform duration-300" />
                             </div>
@@ -405,12 +405,15 @@ const ProductsSection = () => {
                   <DialogContent className="sm:max-w-2xl max-h-[90vh] overflow-y-auto bg-background text-foreground rounded-xl border border-border shadow-2xl">
                     <div className="relative">
                       {/* Header with gradient background */}
-                      <div className="bg-gradient-to-br from-success via-success/90 to-success/70 rounded-t-lg -m-6 mb-0 p-8 text-center">
-                        <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                          <Target className="w-8 h-8 text-white" />
+                      <div className="relative bg-gradient-to-br from-purple-600 via-blue-600 to-indigo-700 rounded-t-lg -m-6 mb-0 p-8 text-center">
+                        <div className="absolute inset-0 bg-black/20" aria-hidden="true"></div>
+                        <div className="relative z-10">
+                          <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-4">
+                            <Target className="w-8 h-8 text-white" />
+                          </div>
+                          <DialogTitle className="text-3xl font-bold text-white drop-shadow mb-2">Assetplus</DialogTitle>
+                          <p className="text-white/90 drop-shadow-sm">Smart Investment Solutions</p>
                         </div>
-                        <DialogTitle className="text-3xl font-bold text-white mb-2">Assetplus</DialogTitle>
-                        <p className="text-white/90">Smart Investment Solutions</p>
                       </div>
                       
                       {/* Content */}
@@ -438,8 +441,8 @@ const ProductsSection = () => {
                         
                         {/* Download buttons */}
                         <div className="grid grid-cols-2 gap-4 mb-6">
-                          <Button className="group relative h-24 flex flex-col items-center justify-center space-y-2 bg-gradient-to-br from-success via-success/95 to-success/80 hover:from-success/95 hover:via-success hover:to-success/90 text-white border-0 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02] hover:-translate-y-1 overflow-hidden">
-                            <div className="absolute inset-0 bg-gradient-to-r from-white/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                          <Button className="group relative h-24 flex flex-col items-center justify-center space-y-2 bg-gradient-to-br from-purple-600 via-purple-500 to-indigo-600 hover:from-purple-500 hover:via-purple-400 hover:to-indigo-500 text-white border-0 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02] hover:-translate-y-1 overflow-hidden">
+                            <div className="absolute inset-0 bg-gradient-to-r from-purple-400/20 via-purple-300/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                             <div className="relative z-10 w-10 h-10 bg-white/25 backdrop-blur-sm rounded-xl flex items-center justify-center group-hover:bg-white/35 transition-all duration-300 group-hover:scale-110">
                               <Smartphone className="w-6 h-6 group-hover:rotate-12 transition-transform duration-300" />
                             </div>
