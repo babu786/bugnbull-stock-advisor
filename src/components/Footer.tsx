@@ -6,21 +6,10 @@ const Footer = () => {
     {
       title: "Company",
       links: [
-        "About Us",
-        "Careers", 
-        "Press",
-        "Blog",
-        "Contact"
-      ]
-    },
-    {
-      title: "Support",
-      links: [
-        "Help Center",
-        "Security",
-        "Privacy Policy", 
-        "Terms of Service",
-        "Disclosures"
+        { name: "Home", href: "/" },
+        { name: "Learn", href: "/learn" },
+        { name: "Services", href: "/services" },
+        { name: "Contact", href: "#", isContact: true }
       ]
     }
   ];
@@ -63,29 +52,29 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Links Sections - Mobile: 2 cols, Desktop: flexible */}
-          <div className="grid grid-cols-2 lg:grid-cols-2 gap-8 lg:gap-12 lg:max-w-2xl">
+          {/* Links Sections */}
+          <div className="grid grid-cols-1 lg:grid-cols-1 gap-8 lg:gap-12 lg:max-w-md">
             {footerSections.map((section, index) => (
               <div key={index} className="text-center lg:text-left">
                 <h3 className="font-semibold text-foreground mb-4 text-sm sm:text-base">{section.title}</h3>
                 <ul className="space-y-3">
                   {section.links.map((link, linkIndex) => (
                     <li key={linkIndex}>
-                      {link === "Contact" ? (
+                      {link.isContact ? (
                         <ContactPopup>
                           <a 
                             href="#" 
                             className="text-sm sm:text-base text-muted-foreground hover:text-foreground transition-colors duration-200 cursor-pointer"
                           >
-                            {link}
+                            {link.name}
                           </a>
                         </ContactPopup>
                       ) : (
                         <a 
-                          href="#" 
+                          href={link.href} 
                           className="text-sm sm:text-base text-muted-foreground hover:text-foreground transition-colors duration-200"
                         >
-                          {link}
+                          {link.name}
                         </a>
                       )}
                     </li>
