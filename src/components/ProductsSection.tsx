@@ -186,7 +186,7 @@ const ProductsSection = () => {
                       <div className="relative">
                         {/* Header with gradient background */}
                           <div className={`relative bg-gradient-to-br ${product.gradient.replace('/10', '').replace('/5', '')} rounded-t-lg -m-6 mb-0 p-8 text-center`}>
-                            <div className="absolute inset-0 bg-black/40" aria-hidden="true"></div>
+                            <div className={`absolute inset-0 ${product.color.replace('text-', 'bg-')}/40`} aria-hidden="true"></div>
                             <div className="relative z-10">
                               <div className="w-16 h-16 bg-black/30 rounded-full flex items-center justify-center mx-auto mb-4">
                                 <Icon className="w-8 h-8 text-white" />
