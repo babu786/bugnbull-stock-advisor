@@ -8,32 +8,61 @@ const ProductsSection = () => {
   const [selectedPlatform, setSelectedPlatform] = useState<string | null>(null);
   const products = [
     {
-      category: "SIP",
-      title: "SIP Planning",
-      description: "Systematic Investment Plan advisory for disciplined wealth creation",
-      apy: "12-15%",
-      features: ["Goal-based planning", "Auto-debit facility", "Tax saving options"],
-      icon: Target,
+      category: "HEALTH",
+      title: "Health Insurance",
+      description: "Comprehensive health coverage for you and your family",
+      apy: "Protection",
+      features: ["Cashless treatment", "Family floater option", "Pre-existing disease cover"],
+      icon: Shield,
       gradient: "from-success/10 to-success/5",
       color: "text-success",
       detailedInfo: {
-        overview: "Our SIP Planning service helps you build wealth systematically through disciplined monthly investments. Perfect for long-term financial goals like retirement, children's education, or home purchase.",
+        overview: "Our Health Insurance service provides comprehensive medical coverage for you and your family. Protect yourself from rising healthcare costs with our carefully selected health insurance plans.",
         benefits: [
-          "Rupee cost averaging reduces market volatility impact",
-          "Compounding benefits over long investment horizons", 
-          "Flexible investment amounts starting from ₹500",
-          "Tax benefits under Section 80C for ELSS funds",
-          "Auto-debit convenience for hassle-free investing"
+          "Cashless treatment at 10,000+ network hospitals",
+          "Coverage for pre-existing diseases after waiting period",
+          "Family floater options with shared sum insured",
+          "Tax benefits under Section 80D up to ₹75,000",
+          "No-claim bonus for consecutive claim-free years"
         ],
         process: [
-          "Goal assessment and risk profiling",
-          "Customized SIP portfolio recommendation", 
-          "Setting up auto-debit and KYC completion",
-          "Regular monitoring and portfolio rebalancing"
+          "Health assessment and medical history review",
+          "Plan comparison and recommendation",
+          "Policy documentation and premium payment",
+          "Claim assistance and renewal support"
         ],
-        minInvestment: "₹500 per month",
-        timeHorizon: "3+ years recommended",
-        expectedReturns: "12-15% annually (market linked)"
+        minInvestment: "₹5,000 per year",
+        timeHorizon: "Annual renewable",
+        expectedReturns: "Health protection coverage"
+      }
+    },
+    {
+      category: "TERM",
+      title: "Term Insurance",
+      description: "Pure life protection with high coverage at affordable premiums",
+      apy: "Coverage",
+      features: ["High coverage amount", "Affordable premiums", "Tax benefits"],
+      icon: Target,
+      gradient: "from-primary/10 to-primary/5",
+      color: "text-primary",
+      detailedInfo: {
+        overview: "Our Term Insurance service offers pure life protection with maximum coverage at minimum cost. Secure your family's financial future with our term insurance recommendations.",
+        benefits: [
+          "High life coverage up to ₹10 crore at low premiums",
+          "Pure protection without investment component",
+          "Flexible premium payment and coverage options",
+          "Tax benefits under Section 80C and 10(10D)",
+          "Additional riders for critical illness and disability"
+        ],
+        process: [
+          "Life insurance needs analysis and coverage calculation",
+          "Medical tests and underwriting process",
+          "Policy issuance and premium setup",
+          "Annual reviews and coverage adjustments"
+        ],
+        minInvestment: "₹6,000 per year",
+        timeHorizon: "5-30 years policy term",
+        expectedReturns: "Life protection coverage"
       }
     },
     {
