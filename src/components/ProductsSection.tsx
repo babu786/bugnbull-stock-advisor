@@ -185,13 +185,16 @@ const ProductsSection = () => {
                     <DialogContent className="sm:max-w-2xl max-h-[90vh] overflow-y-auto bg-background text-foreground">
                       <div className="relative">
                         {/* Header with gradient background */}
-                        <div className={`bg-gradient-to-br ${product.gradient.replace('/10', '').replace('/5', '')} rounded-t-lg -m-6 mb-0 p-8 text-center`}>
-                          <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <Icon className="w-8 h-8 text-white" />
+                          <div className={`relative bg-gradient-to-br ${product.gradient.replace('/10', '').replace('/5', '')} rounded-t-lg -m-6 mb-0 p-8 text-center`}>
+                            <div className="absolute inset-0 bg-black/40" aria-hidden="true"></div>
+                            <div className="relative z-10">
+                              <div className="w-16 h-16 bg-black/30 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <Icon className="w-8 h-8 text-white" />
+                              </div>
+                              <DialogTitle className="text-3xl font-bold text-white mb-2">{product.title}</DialogTitle>
+                              <p className="text-white/90">{product.category} SERVICE</p>
+                            </div>
                           </div>
-                          <DialogTitle className="text-3xl font-bold text-white mb-2">{product.title}</DialogTitle>
-                          <p className="text-white/90">{product.category} SERVICE</p>
-                        </div>
                         
                         {/* Content */}
                         <div className="p-6 pt-8 text-foreground">
