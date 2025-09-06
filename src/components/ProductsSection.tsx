@@ -321,7 +321,7 @@ const ProductsSection = () => {
                       AngelOne
                     </Button>
                   </DialogTrigger>
-                  <DialogContent className="sm:max-w-2xl">
+                   <DialogContent className="sm:max-w-2xl max-h-[90vh] overflow-y-auto bg-background text-foreground rounded-xl border border-border shadow-2xl">
                     <div className="relative">
                       {/* Header with gradient background */}
                       <div className="relative bg-gradient-hero rounded-t-lg -m-6 mb-0 p-8 text-center">
@@ -402,7 +402,7 @@ const ProductsSection = () => {
                       Assetplus
                     </Button>
                   </DialogTrigger>
-                  <DialogContent className="sm:max-w-2xl">
+                  <DialogContent className="sm:max-w-2xl max-h-[90vh] overflow-y-auto bg-background text-foreground rounded-xl border border-border shadow-2xl">
                     <div className="relative">
                       {/* Header with gradient background */}
                       <div className="bg-gradient-to-br from-success via-success/90 to-success/70 rounded-t-lg -m-6 mb-0 p-8 text-center">
