@@ -8,61 +8,32 @@ const ProductsSection = () => {
   const [selectedPlatform, setSelectedPlatform] = useState<string | null>(null);
   const products = [
     {
-      category: "HEALTH",
-      title: "Health Insurance",
-      description: "Comprehensive health coverage for you and your family",
+      category: "INSURANCE",
+      title: "Insurance Advisory",
+      description: "Complete health and life insurance solutions for comprehensive protection",
       apy: "Protection",
-      features: ["Cashless treatment", "Family floater option", "Pre-existing disease cover"],
+      features: ["Health & life coverage", "Tax benefits", "Family protection"],
       icon: Shield,
       gradient: "from-success/10 to-success/5",
       color: "text-success",
       detailedInfo: {
-        overview: "Our Health Insurance service provides comprehensive medical coverage for you and your family. Protect yourself from rising healthcare costs with our carefully selected health insurance plans.",
+        overview: "Our Insurance Advisory service provides comprehensive health and life insurance solutions. Get complete protection for you and your family with our expertly curated insurance plans covering both health and life risks.",
         benefits: [
           "Cashless treatment at 10,000+ network hospitals",
-          "Coverage for pre-existing diseases after waiting period",
-          "Family floater options with shared sum insured",
-          "Tax benefits under Section 80D up to ₹75,000",
-          "No-claim bonus for consecutive claim-free years"
+          "High life coverage up to ₹10 crore at affordable premiums",
+          "Family floater health plans with shared sum insured",
+          "Tax benefits under Section 80C and 80D up to ₹2.25 lakhs",
+          "Additional riders for critical illness and disability coverage"
         ],
         process: [
-          "Health assessment and medical history review",
-          "Plan comparison and recommendation",
-          "Policy documentation and premium payment",
-          "Claim assistance and renewal support"
+          "Complete risk assessment and insurance needs analysis",
+          "Health check-up and life insurance underwriting",
+          "Policy comparison and customized recommendations",
+          "Documentation, premium setup and ongoing support"
         ],
         minInvestment: "₹5,000 per year",
-        timeHorizon: "Annual renewable",
-        expectedReturns: "Health protection coverage"
-      }
-    },
-    {
-      category: "TERM",
-      title: "Term Insurance",
-      description: "Pure life protection with high coverage at affordable premiums",
-      apy: "Coverage",
-      features: ["High coverage amount", "Affordable premiums", "Tax benefits"],
-      icon: Target,
-      gradient: "from-primary/10 to-primary/5",
-      color: "text-primary",
-      detailedInfo: {
-        overview: "Our Term Insurance service offers pure life protection with maximum coverage at minimum cost. Secure your family's financial future with our term insurance recommendations.",
-        benefits: [
-          "High life coverage up to ₹10 crore at low premiums",
-          "Pure protection without investment component",
-          "Flexible premium payment and coverage options",
-          "Tax benefits under Section 80C and 10(10D)",
-          "Additional riders for critical illness and disability"
-        ],
-        process: [
-          "Life insurance needs analysis and coverage calculation",
-          "Medical tests and underwriting process",
-          "Policy issuance and premium setup",
-          "Annual reviews and coverage adjustments"
-        ],
-        minInvestment: "₹6,000 per year",
-        timeHorizon: "5-30 years policy term",
-        expectedReturns: "Life protection coverage"
+        timeHorizon: "Annual renewable to 30 years",
+        expectedReturns: "Comprehensive protection coverage"
       }
     },
     {
