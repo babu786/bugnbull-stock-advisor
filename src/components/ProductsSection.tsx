@@ -357,23 +357,27 @@ const ProductsSection = () => {
                         
                         {/* Download buttons */}
                         <div className="grid grid-cols-2 gap-4 mb-6">
-                          <Button className="h-20 flex flex-col items-center justify-center space-y-3 bg-gradient-to-br from-primary via-primary/90 to-primary/80 hover:from-primary/90 hover:to-primary/70 text-white border-0 rounded-xl shadow-lg">
-                            <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
-                              <Smartphone className="w-5 h-5" />
+                          <Button className="group relative h-24 flex flex-col items-center justify-center space-y-2 bg-gradient-to-br from-primary via-primary/95 to-primary/80 hover:from-primary/95 hover:via-primary hover:to-primary/90 text-white border-0 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02] hover:-translate-y-1 overflow-hidden">
+                            <div className="absolute inset-0 bg-gradient-to-r from-white/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div className="relative z-10 w-10 h-10 bg-white/25 backdrop-blur-sm rounded-xl flex items-center justify-center group-hover:bg-white/35 transition-all duration-300 group-hover:scale-110">
+                              <Smartphone className="w-6 h-6 group-hover:rotate-12 transition-transform duration-300" />
                             </div>
-                            <div className="text-center">
-                              <p className="text-sm font-bold">Google Play</p>
-                              <p className="text-xs opacity-90">Android App</p>
+                            <div className="relative z-10 text-center">
+                              <p className="text-sm font-bold tracking-wide">Google Play</p>
+                              <p className="text-xs opacity-90 font-medium">Android App</p>
                             </div>
+                            <div className="absolute -bottom-2 -right-2 w-16 h-16 bg-white/5 rounded-full blur-xl"></div>
                           </Button>
-                          <Button className="h-20 flex flex-col items-center justify-center space-y-3 bg-gradient-to-br from-secondary via-secondary/90 to-secondary/80 hover:from-secondary/90 hover:to-secondary/70 text-secondary-foreground border-0 rounded-xl shadow-lg">
-                            <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
-                              <Smartphone className="w-5 h-5" />
+                          <Button className="group relative h-24 flex flex-col items-center justify-center space-y-2 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-600 hover:from-slate-700 hover:via-slate-600 hover:to-slate-500 text-white border-0 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02] hover:-translate-y-1 overflow-hidden">
+                            <div className="absolute inset-0 bg-gradient-to-r from-white/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div className="relative z-10 w-10 h-10 bg-white/25 backdrop-blur-sm rounded-xl flex items-center justify-center group-hover:bg-white/35 transition-all duration-300 group-hover:scale-110">
+                              <Smartphone className="w-6 h-6 group-hover:rotate-12 transition-transform duration-300" />
                             </div>
-                            <div className="text-center">
-                              <p className="text-sm font-bold">App Store</p>
-                              <p className="text-xs opacity-90">iOS App</p>
+                            <div className="relative z-10 text-center">
+                              <p className="text-sm font-bold tracking-wide">App Store</p>
+                              <p className="text-xs opacity-90 font-medium">iOS App</p>
                             </div>
+                            <div className="absolute -bottom-2 -right-2 w-16 h-16 bg-white/5 rounded-full blur-xl"></div>
                           </Button>
                         </div>
                         
@@ -431,23 +435,27 @@ const ProductsSection = () => {
                         
                         {/* Download buttons */}
                         <div className="grid grid-cols-2 gap-4 mb-6">
-                          <Button className="h-20 flex flex-col items-center justify-center space-y-3 bg-gradient-to-br from-success via-success/90 to-success/80 hover:from-success/90 hover:to-success/70 text-white border-0 rounded-xl shadow-lg">
-                            <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
-                              <Smartphone className="w-5 h-5" />
+                          <Button className="group relative h-24 flex flex-col items-center justify-center space-y-2 bg-gradient-to-br from-success via-success/95 to-success/80 hover:from-success/95 hover:via-success hover:to-success/90 text-white border-0 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02] hover:-translate-y-1 overflow-hidden">
+                            <div className="absolute inset-0 bg-gradient-to-r from-white/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div className="relative z-10 w-10 h-10 bg-white/25 backdrop-blur-sm rounded-xl flex items-center justify-center group-hover:bg-white/35 transition-all duration-300 group-hover:scale-110">
+                              <Smartphone className="w-6 h-6 group-hover:rotate-12 transition-transform duration-300" />
                             </div>
-                            <div className="text-center">
-                              <p className="text-sm font-bold">Google Play</p>
-                              <p className="text-xs opacity-90">Android App</p>
+                            <div className="relative z-10 text-center">
+                              <p className="text-sm font-bold tracking-wide">Google Play</p>
+                              <p className="text-xs opacity-90 font-medium">Android App</p>
                             </div>
+                            <div className="absolute -bottom-2 -right-2 w-16 h-16 bg-white/5 rounded-full blur-xl"></div>
                           </Button>
-                          <Button className="h-20 flex flex-col items-center justify-center space-y-3 bg-gradient-to-br from-secondary via-secondary/90 to-secondary/80 hover:from-secondary/90 hover:to-secondary/70 text-secondary-foreground border-0 rounded-xl shadow-lg">
-                            <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
-                              <Smartphone className="w-5 h-5" />
+                          <Button className="group relative h-24 flex flex-col items-center justify-center space-y-2 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-600 hover:from-slate-700 hover:via-slate-600 hover:to-slate-500 text-white border-0 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02] hover:-translate-y-1 overflow-hidden">
+                            <div className="absolute inset-0 bg-gradient-to-r from-white/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div className="relative z-10 w-10 h-10 bg-white/25 backdrop-blur-sm rounded-xl flex items-center justify-center group-hover:bg-white/35 transition-all duration-300 group-hover:scale-110">
+                              <Smartphone className="w-6 h-6 group-hover:rotate-12 transition-transform duration-300" />
                             </div>
-                            <div className="text-center">
-                              <p className="text-sm font-bold">App Store</p>
-                              <p className="text-xs opacity-90">iOS App</p>
+                            <div className="relative z-10 text-center">
+                              <p className="text-sm font-bold tracking-wide">App Store</p>
+                              <p className="text-xs opacity-90 font-medium">iOS App</p>
                             </div>
+                            <div className="absolute -bottom-2 -right-2 w-16 h-16 bg-white/5 rounded-full blur-xl"></div>
                           </Button>
                         </div>
                         
