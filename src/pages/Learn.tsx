@@ -1,5 +1,6 @@
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import ContactPopup from '@/components/ContactPopup';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { BookOpen, Play, Users, Award, Clock, Star } from 'lucide-react';
@@ -214,9 +215,11 @@ const Learn = () => {
                     
                     <div className="flex justify-between items-center pt-4">
                       <div className="text-2xl font-bold gradient-text">{course.price}</div>
-                      <Button className="bg-gradient-primary hover:opacity-90">
-                        Enroll Now
-                      </Button>
+                      <ContactPopup>
+                        <Button className="bg-gradient-primary hover:opacity-90">
+                          Enroll Now
+                        </Button>
+                      </ContactPopup>
                     </div>
                   </div>
                 </CardContent>
