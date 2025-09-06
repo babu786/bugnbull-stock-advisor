@@ -372,7 +372,7 @@ const ProductsSection = () => {
                             <div className="absolute -bottom-2 -right-2 w-16 h-16 bg-white/5 rounded-full blur-xl"></div>
                           </Button>
                           <Button className="group relative h-24 flex flex-col items-center justify-center space-y-2 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-600 hover:from-slate-700 hover:via-slate-600 hover:to-slate-500 text-white border-0 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02] hover:-translate-y-1 overflow-hidden">
-                            <div className="absolute inset-0 bg-gradient-to-r from-white/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                             <div className="relative z-10 w-10 h-10 bg-white/25 backdrop-blur-sm rounded-xl flex items-center justify-center group-hover:bg-white/35 transition-all duration-300 group-hover:scale-110">
                               <Smartphone className="w-6 h-6 group-hover:rotate-12 transition-transform duration-300" />
                             </div>
